@@ -6,6 +6,7 @@ REPO_NAME="SiteAuditing"
 README_PATH="README.md"
 API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/$README_PATH"
 TEMP_FILE="temp_readme.md"
+TABLE_FILE="table_content.md"
 
 # Insert your GitHub API key here
 GITHUB_API_KEY="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"
@@ -19,14 +20,14 @@ fi
 # Scan all DLL files in the /app folder
 DLL_FILES=$(find /app -type f -name "*.dll")
 
-# Prepare the updated table content
-UPDATED_TABLE="| Module                     | Date modified |Current Version | Newest version|Link| Bug   |\n"
-UPDATED_TABLE+="| -------------------------- |:---------------:|:---------------:| -------------:|-------------:| -----:|\n"
+# Prepare the updated table content and save it to a temporary file
+echo "| Module                     | Date modified |Current Version | Newest version|Link| Bug   |" > "$TABLE_FILE"
+echo "| -------------------------- |:---------------:|:---------------:| -------------:|-------------:| -----:|" >> "$TABLE_FILE"
 
 for DLL_FILE in $DLL_FILES; do
   DLL_NAME=$(basename "$DLL_FILE")
   MODIFIED_DATE=$(stat -c "%y" "$DLL_FILE" | cut -d' ' -f1)
-  UPDATED_TABLE+="| $DLL_NAME | $MODIFIED_DATE | | | | |\n"
+  echo "| $DLL_NAME | $MODIFIED_DATE | | | | |" >> "$TABLE_FILE"
 done
 
 # Fetch the README file from GitHub
@@ -42,9 +43,16 @@ fi
 echo "$RESPONSE" > "$TEMP_FILE"
 
 # Update the README.md content using awk
-awk -v new_table="$(printf '%s\n' "$UPDATED_TABLE")" '
+awk -v table_file="$TABLE_FILE" '
   BEGIN {print_table=0}
-  /| Module/ {print_table=1; print new_table; next}
+  /| Module/ {
+    print_table=1
+    while ((getline line < table_file) > 0) {
+      print line
+    }
+    close(table_file)
+    next
+  }
   print_table==0 {print}
   print_table==1 && /^\|/ {next}
   print_table==1 && !/^\|/ {print_table=0}
@@ -71,7 +79,7 @@ EOF
 )
 
 # Clean up temporary files
-rm "$TEMP_FILE" "updated_$TEMP_FILE"
+rm "$TEMP_FILE" "updated_$TEMP_FILE" "$TABLE_FILE"
 
 # Check if the update was successful
 if echo "$UPDATE_RESPONSE" | grep -q '"commit"'; then

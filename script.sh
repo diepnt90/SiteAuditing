@@ -21,8 +21,6 @@ DECODED_CONTENT=$(echo "$CONTENT" | base64 -d)
 
 # Find the table in the content
 TABLE_START=$(echo "$DECODED_CONTENT" | grep -n "| Module" | cut -d: -f1)
-TABLE_END=$(echo "$DECODED_CONTENT" | sed -n "$TABLE_START,\$p" | grep -n "^$" | head -1 | cut -d: -f1)
-TABLE_END=$((TABLE_START + TABLE_END - 1))
 
 # Extract the table header
 TABLE_HEADER=$(echo "$DECODED_CONTENT" | sed -n "${TABLE_START}p")
@@ -39,9 +37,26 @@ for file in *.dll; do
 done
 
 # Construct new content
-NEW_CONTENT=$(echo "$DECODED_CONTENT" | sed -n "1,${TABLE_START}p")
-NEW_CONTENT+="$NEW_TABLE_CONTENT"
-NEW_CONTENT+=$(echo "$DECODED_CONTENT" | sed -n "$TABLE_END,\$p")
+NEW_CONTENT=""
+IFS=$'\n'
+while read -r line; do
+    if [[ "$line" == "| Module"* ]]; then
+        NEW_CONTENT+="$NEW_TABLE_CONTENT"
+        break
+    else
+        NEW_CONTENT+="$line"$'\n'
+    fi
+done <<< "$DECODED_CONTENT"
+
+# Add the rest of the content after the table
+add_rest=false
+while read -r line; do
+    if $add_rest; then
+        NEW_CONTENT+="$line"$'\n'
+    elif [[ "$line" == "| Module"* ]]; then
+        add_rest=true
+    fi
+done <<< "$DECODED_CONTENT"
 
 # Encode the new content
 ENCODED_CONTENT=$(echo "$NEW_CONTENT" | base64 | tr -d '\n')

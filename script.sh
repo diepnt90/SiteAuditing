@@ -1,71 +1,42 @@
 #!/bin/bash
 
-# Install jq if it is not installed
-if ! command -v jq &> /dev/null; then
-    echo "jq is not installed. Installing jq..."
-    apt-get install jq -y
-fi
+# Define the output markdown file
+OUTPUT_FILE="dll_updates.md"
 
-# Configuration
-GITHUB_API_KEY="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" # Replace with your GitHub API key or use an environment variable
-REPO_OWNER="diepnt90"
-REPO_NAME="SiteAuditing"
-README_PATH="README.md"
-DLL_DIRECTORY="/app"
+# Write the headers to the markdown file
+echo -e "Module Name\tModified Date\tCurrent Version\tNewest Version\tLinks\tNotes" > "$OUTPUT_FILE"
 
-# Get the current README content from GitHub
-readme_url="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${README_PATH}"
-readme_response=$(curl -s -H "Authorization: Bearer ${GITHUB_API_KEY}" "$readme_url")
+# Directory containing the DLL files
+DLL_DIR="/app"
 
-# Check if README response is valid
-if [ "$(echo "$readme_response" | jq -r .message)" == "Not Found" ]; then
-    echo "README.md not found at the specified path: ${README_PATH}"
-    exit 1
-fi
+# Loop through each DLL file in the directory
+find "$DLL_DIR" -name "*.dll" | while read -r dll_file; do
+    # Extract the module name from the DLL file path
+    module_name=$(basename "$dll_file")
 
-# Extract the SHA and download URL
-readme_sha=$(echo "$readme_response" | jq -r .sha)
-download_url=$(echo "$readme_response" | jq -r .download_url)
+    # Get the modified date of the DLL file
+    modified_date=$(date -r "$dll_file" +"%Y-%m-%d")
 
-# Download the current README.md file
-curl -s -H "Authorization: Bearer ${GITHUB_API_KEY}" -o README.md "$download_url"
+    # Dummy current version for example purposes (extracting the version can be customized)
+    # Here we are using a default "1.0.0", you should replace this logic with actual version retrieval
+    current_version="1.0.0"
 
-# Get the modified date of all DLL files
-dll_info=""
-while IFS= read -r -d '' file; do
-    modified_date=$(stat -c "%y" "$file" | cut -d'.' -f1)
-    dll_name=$(basename "$file")
-    dll_info="${dll_info}| ${dll_name} | ${modified_date} |\n"
-done < <(find "$DLL_DIRECTORY" -type f -name "*.dll" -print0)
+    # Dummy newest version for example purposes
+    # You could replace this with a logic that pulls the actual latest version (perhaps from a database or API)
+    newest_version="1.2.0"
 
-# Prepare the new table content
-table_header="| Module Name | Modified Date |\n|-------------|---------------|\n"
-new_table_content="${table_header}${dll_info}"
+    # Define the link for reference, here we put a placeholder
+    link="Release Notes"
 
-# Modify the README.md file locally
-sed -i "/| Module Name/,/| Notes |/c\\$new_table_content" README.md
+    # Determine if the module needs updating or is up-to-date
+    if [ "$current_version" == "$newest_version" ]; then
+        notes="Up-to-date"
+    else
+        notes="Needs updating"
+    fi
 
-# Encode the modified README.md file to base64
-updated_readme_base64=$(base64 README.md | tr -d '\n')
+    # Append the information to the output markdown file
+    echo -e "$module_name\t$modified_date\t$current_version\t$newest_version\t$link\t$notes" >> "$OUTPUT_FILE"
+done
 
-# Prepare the payload for the update request
-update_payload=$(jq -n --arg msg "Update README with DLL files and modified dates" \
-    --arg content "$updated_readme_base64" \
-    --arg sha "$readme_sha" \
-    '{message: $msg, content: $content, sha: $sha}')
-
-# Update the README on GitHub
-update_response=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_API_KEY}" \
-    -H "Content-Type: application/json" \
-    -d "$update_payload" "$readme_url")
-
-# Check if the update was successful
-if echo "$update_response" | jq -e .commit.sha > /dev/null; then
-    echo "README.md updated successfully."
-else
-    echo "Failed to update README.md."
-    echo "$update_response"
-fi
-
-# Clean up the downloaded README.md file
-rm README.md
+echo "DLL information has been updated in $OUTPUT_FILE."

@@ -19,14 +19,7 @@ fi
 # Ensure jq is installed, install it if not
 if ! command -v jq &> /dev/null; then
   echo "jq is not installed. Installing jq..."
-  if [ -x "$(command -v apt-get)" ]; then
-    sudo apt-get update && sudo apt-get install -y jq
-  elif [ -x "$(command -v yum)" ]; then
-    sudo yum install -y jq
-  else
-    echo "Error: Package manager not supported. Please install jq manually."
-    exit 1
-  fi
+  apt-get install -y jq
 fi
 
 # Scan all DLL files in the /app folder

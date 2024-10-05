@@ -1,42 +1,37 @@
 #!/bin/bash
 
-# Define the output markdown file
-OUTPUT_FILE="dll_updates.md"
+# Set your GitHub information
+GITHUB_OWNER="diepnt90"                           # GitHub username
+GITHUB_REPO="SiteAuditing"                         # Repository name
+GITHUB_BRANCH="main"                               # Branch name, e.g., 'main'
+FILE_PATH="dll_updates.md"                         # File to be uploaded
+GITHUB_TOKEN="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"              # Your GitHub Personal Access Token
 
-# Write the headers to the markdown file
-echo -e "Module Name\tModified Date\tCurrent Version\tNewest Version\tLinks\tNotes" > "$OUTPUT_FILE"
+# GitHub API endpoint for the file
+GITHUB_API_URL="https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/contents/$FILE_PATH"
 
-# Directory containing the DLL files
-DLL_DIR="/app"
+# Get SHA of the existing file if it exists
+SHA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$GITHUB_API_URL" | jq -r '.sha')
 
-# Loop through each DLL file in the directory
-find "$DLL_DIR" -name "*.dll" | while read -r dll_file; do
-    # Extract the module name from the DLL file path
-    module_name=$(basename "$dll_file")
+# Step 1: Delete the existing file if it exists
+if [ "$SHA" != "null" ]; then
+    DELETE_PAYLOAD=$(jq -n --arg message "Delete old dll_updates.md" --arg branch "$GITHUB_BRANCH" --arg sha "$SHA" \
+    '{ message: $message, branch: $branch, sha: $sha }')
+    
+    curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$DELETE_PAYLOAD" "$GITHUB_API_URL"
+    
+    echo "Old dll_updates.md deleted."
+fi
 
-    # Get the modified date of the DLL file
-    modified_date=$(date -r "$dll_file" +"%Y-%m-%d")
+# Step 2: Upload the new file
+# Get the content of the file encoded in base64
+FILE_CONTENT=$(base64 -w 0 "$FILE_PATH") # -w 0 removes line wrapping for the base64 output
 
-    # Dummy current version for example purposes (extracting the version can be customized)
-    # Here we are using a default "1.0.0", you should replace this logic with actual version retrieval
-    current_version="1.0.0"
+# Create JSON payload for GitHub API to add the new file
+UPLOAD_PAYLOAD=$(jq -n --arg path "$FILE_PATH" --arg message "Add new dll_updates.md" --arg content "$FILE_CONTENT" --arg branch "$GITHUB_BRANCH" \
+'{ path: $path, message: $message, content: $content, branch: $branch }')
 
-    # Dummy newest version for example purposes
-    # You could replace this with a logic that pulls the actual latest version (perhaps from a database or API)
-    newest_version="1.2.0"
+# Upload the file using GitHub API
+curl -X PUT -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$UPLOAD_PAYLOAD" "$GITHUB_API_URL"
 
-    # Define the link for reference, here we put a placeholder
-    link="Release Notes"
-
-    # Determine if the module needs updating or is up-to-date
-    if [ "$current_version" == "$newest_version" ]; then
-        notes="Up-to-date"
-    else
-        notes="Needs updating"
-    fi
-
-    # Append the information to the output markdown file
-    echo -e "$module_name\t$modified_date\t$current_version\t$newest_version\t$link\t$notes" >> "$OUTPUT_FILE"
-done
-
-echo "DLL information has been updated in $OUTPUT_FILE."
+echo "New dll_updates.md uploaded."

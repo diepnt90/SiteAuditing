@@ -42,7 +42,7 @@ fi
 echo "$RESPONSE" > "$TEMP_FILE"
 
 # Update the README.md content using awk
-awk -v new_table="$UPDATED_TABLE" '
+awk -v new_table="$(printf '%s\n' "$UPDATED_TABLE")" '
   BEGIN {print_table=0}
   /| Module/ {print_table=1; print new_table; next}
   print_table==0 {print}
@@ -52,6 +52,12 @@ awk -v new_table="$UPDATED_TABLE" '
 
 # Get the SHA of the current README.md (required for updating via API)
 SHA=$(curl -s -H "Authorization: token $GITHUB_API_KEY" "$API_URL" | grep '"sha"' | head -n 1 | cut -d '"' -f 4)
+
+# Check if SHA is retrieved correctly
+if [ -z "$SHA" ]; then
+  echo "Failed to retrieve SHA. Please check your API credentials and permissions."
+  exit 1
+fi
 
 # Update README.md on GitHub
 echo "Updating README.md on GitHub..."

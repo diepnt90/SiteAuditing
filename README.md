@@ -1,2 +1,2 @@
-| Module                     | Date modified |Current Version | Newest version| Bug   |
-| -------------------------- |:---------------:|:---------------:| -------------:| -----:|
+| Module                     | Date modified |Current Version | Newest version|Link| Bug   |
+| -------------------------- |:---------------:|:---------------:| -------------:|-------------:| -----:|

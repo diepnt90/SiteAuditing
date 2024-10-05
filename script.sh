@@ -1,70 +1,76 @@
 #!/bin/bash
 
-# GitHub API token
-API_TOKEN="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"
-
-# GitHub repository details
+# Set variables
 REPO_OWNER="diepnt90"
 REPO_NAME="SiteAuditing"
-FILE_PATH="README.md"
+README_PATH="README.md"
+API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/$README_PATH"
+TEMP_FILE="temp_readme.md"
 
-# Get the current content of the README.md file
-RESPONSE=$(curl -s -H "Authorization: token $API_TOKEN" \
-  "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/$FILE_PATH")
+# Insert your GitHub API key here
+GITHUB_API_KEY="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"
 
-# Extract content and SHA using grep and cut
-CONTENT=$(echo "$RESPONSE" | grep '"content":' | cut -d '"' -f 4)
-SHA=$(echo "$RESPONSE" | grep '"sha":' | cut -d '"' -f 4)
+# Ensure the API key is present
+if [ -z "$GITHUB_API_KEY" ]; then
+  echo "Please set your GitHub API key in the script (GITHUB_API_KEY)."
+  exit 1
+fi
 
-# Decode content
-DECODED_CONTENT=$(echo "$CONTENT" | base64 -d)
+# Scan all DLL files in the /app folder
+DLL_FILES=$(find /app -type f -name "*.dll")
 
-# Find the table in the content
-TABLE_START=$(echo "$DECODED_CONTENT" | grep -n "| Module" | cut -d: -f1)
+# Prepare the updated table content
+UPDATED_TABLE="| Module                     | Date modified |Current Version | Newest version|Link| Bug   |\n"
+UPDATED_TABLE+="| -------------------------- |:---------------:|:---------------:| -------------:|-------------:| -----:|\n"
 
-# Extract the table header
-TABLE_HEADER=$(echo "$DECODED_CONTENT" | sed -n "${TABLE_START}p")
-
-# Generate new table content
-NEW_TABLE_CONTENT="$TABLE_HEADER"$'\n'
-
-# Scan DLL files and get their modified dates
-for file in *.dll; do
-    if [ -f "$file" ]; then
-        mod_date=$(stat -c "%y" "$file" | cut -d. -f1)
-        NEW_TABLE_CONTENT+="| $file | $mod_date | | | | |"$'\n'
-    fi
+for DLL_FILE in $DLL_FILES; do
+  DLL_NAME=$(basename "$DLL_FILE")
+  MODIFIED_DATE=$(stat -c "%y" "$DLL_FILE" | cut -d' ' -f1)
+  UPDATED_TABLE+="| $DLL_NAME | $MODIFIED_DATE | | | | |\n"
 done
 
-# Construct new content
-NEW_CONTENT=""
-IFS=$'\n'
-while read -r line; do
-    if [[ "$line" == "| Module"* ]]; then
-        NEW_CONTENT+="$NEW_TABLE_CONTENT"
-        break
-    else
-        NEW_CONTENT+="$line"$'\n'
-    fi
-done <<< "$DECODED_CONTENT"
+# Fetch the README file from GitHub
+echo "Fetching README.md from GitHub..."
+RESPONSE=$(curl -s -H "Authorization: token $GITHUB_API_KEY" -H "Accept: application/vnd.github.v3.raw" "$API_URL")
 
-# Add the rest of the content after the table
-add_rest=false
-while read -r line; do
-    if $add_rest; then
-        NEW_CONTENT+="$line"$'\n'
-    elif [[ "$line" == "| Module"* ]]; then
-        add_rest=true
-    fi
-done <<< "$DECODED_CONTENT"
+if [ $? -ne 0 ]; then
+  echo "Failed to fetch README.md from GitHub."
+  exit 1
+fi
 
-# Encode the new content
-ENCODED_CONTENT=$(echo "$NEW_CONTENT" | base64 | tr -d '\n')
+# Write the content of README.md to a temp file
+echo "$RESPONSE" > "$TEMP_FILE"
 
-# Update the file on GitHub
-curl -s -X PUT \
-  -H "Authorization: token $API_TOKEN" \
-  -d "{\"message\":\"Update DLL information\",\"content\":\"$ENCODED_CONTENT\",\"sha\":\"$SHA\"}" \
-  "https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/$FILE_PATH"
+# Update the README.md content using awk
+awk -v new_table="$UPDATED_TABLE" '
+  BEGIN {print_table=0}
+  /| Module/ {print_table=1; print new_table; next}
+  print_table==0 {print}
+  print_table==1 && /^\|/ {next}
+  print_table==1 && !/^\|/ {print_table=0}
+' "$TEMP_FILE" > "updated_$TEMP_FILE"
 
-echo "README.md has been updated with the latest DLL information."
+# Get the SHA of the current README.md (required for updating via API)
+SHA=$(curl -s -H "Authorization: token $GITHUB_API_KEY" "$API_URL" | grep '"sha"' | head -n 1 | cut -d '"' -f 4)
+
+# Update README.md on GitHub
+echo "Updating README.md on GitHub..."
+UPDATE_RESPONSE=$(curl -s -X PUT -H "Authorization: token $GITHUB_API_KEY" -H "Accept: application/vnd.github.v3+json" "$API_URL" -d @- <<EOF
+{
+  "message": "Update DLL modified dates in README.md",
+  "content": "$(base64 -w 0 < updated_$TEMP_FILE)",
+  "sha": "$SHA"
+}
+EOF
+)
+
+# Clean up temporary files
+rm "$TEMP_FILE" "updated_$TEMP_FILE"
+
+# Check if the update was successful
+if echo "$UPDATE_RESPONSE" | grep -q '"commit"'; then
+  echo "README.md updated successfully."
+else
+  echo "Failed to update README.md. Response:"
+  echo "$UPDATE_RESPONSE"
+fi

@@ -10,28 +10,34 @@ GITHUB_TOKEN="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"              # Your GitH
 # GitHub API endpoint for the file
 GITHUB_API_URL="https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/contents/$FILE_PATH"
 
-# Get SHA of the existing file if it exists
-SHA=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "$GITHUB_API_URL" | jq -r '.sha')
+# Get the content of the file encoded in base64
+FILE_CONTENT=$(base64 -w 0 "$FILE_PATH") # -w 0 removes line wrapping for the base64 output
 
-# Step 1: Delete the existing file if it exists
+# Get SHA of the existing file if it exists
+SHA=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$GITHUB_API_URL" | jq -r '.sha')
+
+# Step 1: Delete the existing file if it exists (Optional but will ensure it's a new upload)
 if [ "$SHA" != "null" ]; then
     DELETE_PAYLOAD=$(jq -n --arg message "Delete old dll_updates.md" --arg branch "$GITHUB_BRANCH" --arg sha "$SHA" \
     '{ message: $message, branch: $branch, sha: $sha }')
     
-    curl -X DELETE -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$DELETE_PAYLOAD" "$GITHUB_API_URL"
+    curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$DELETE_PAYLOAD" "$GITHUB_API_URL"
     
     echo "Old dll_updates.md deleted."
 fi
 
 # Step 2: Upload the new file
-# Get the content of the file encoded in base64
-FILE_CONTENT=$(base64 -w 0 "$FILE_PATH") # -w 0 removes line wrapping for the base64 output
-
 # Create JSON payload for GitHub API to add the new file
 UPLOAD_PAYLOAD=$(jq -n --arg path "$FILE_PATH" --arg message "Add new dll_updates.md" --arg content "$FILE_CONTENT" --arg branch "$GITHUB_BRANCH" \
 '{ path: $path, message: $message, content: $content, branch: $branch }')
 
 # Upload the file using GitHub API
-curl -X PUT -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$UPLOAD_PAYLOAD" "$GITHUB_API_URL"
+RESPONSE=$(curl -X PUT -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$UPLOAD_PAYLOAD" "$GITHUB_API_URL")
 
-echo "New dll_updates.md uploaded."
+# Check for successful upload
+if echo "$RESPONSE" | grep -q '"commit":'; then
+    echo "New dll_updates.md uploaded successfully."
+else
+    echo "Failed to upload dll_updates.md. Response:"
+    echo "$RESPONSE"
+fi

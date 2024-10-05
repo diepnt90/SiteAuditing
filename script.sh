@@ -7,7 +7,7 @@ if ! command -v jq &> /dev/null; then
 fi
 
 # Configuration
-GITHUB_API_KEY="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" # Replace this or set it as an environment variable
+GITHUB_API_KEY="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" # Replace with your GitHub API key or use an environment variable
 REPO_OWNER="diepnt90"
 REPO_NAME="SiteAuditing"
 README_PATH="README.md"
@@ -27,7 +27,7 @@ new_table_content="${table_header}${dll_info}"
 
 # Get the current README content from GitHub
 readme_url="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${README_PATH}"
-readme_response=$(curl -s --header "Authorization: Bearer ${GITHUB_API_KEY}" "$readme_url")
+readme_response=$(curl -s -H "Authorization: Bearer ${GITHUB_API_KEY}" "$readme_url")
 
 # Check if README response is valid
 if [ "$(echo "$readme_response" | jq -r .message)" == "Not Found" ]; then
@@ -45,13 +45,14 @@ updated_readme_content=$(echo "$readme_content" | sed -e "/| Module Name/,/| Not
 # Encode the updated content to base64
 updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 
-# Update the README on GitHub
+# Prepare the payload for the update request
 update_payload=$(jq -n --arg msg "Test update to README.md" \
-                    --arg content "$updated_readme_base64" \
-                    --arg sha "$readme_sha" \
-                    '{message: $msg, content: $content, sha: $sha}')
+    --arg content "$updated_readme_base64" \
+    --arg sha "$readme_sha" \
+    '{message: $msg, content: $content, sha: $sha}')
 
-update_response=$(curl -s -X PUT --header "Authorization: Bearer ${GITHUB_API_KEY}" \
+# Update the README on GitHub
+update_response=$(curl -s -X PUT -H "Authorization: Bearer ${GITHUB_API_KEY}" \
     -H "Content-Type: application/json" \
     -d "$update_payload" "$readme_url")
 

@@ -7,7 +7,7 @@ if ! command -v jq &> /dev/null; then
 fi
 
 # Configuration
-GITHUB_API_KEY="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" # Set this as an environment variable instead of hardcoding it
+GITHUB_API_KEY="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" # Set this as an environment variable instead of hardcoding it
 REPO_OWNER="diepnt90"
 REPO_NAME="SiteAuditing"
 README_PATH="README.md"

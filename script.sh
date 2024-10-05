@@ -7,7 +7,7 @@ if ! command -v jq &> /dev/null; then
 fi
 
 # Configuration
-GITHUB_API_KEY="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" # Set this as an environment variable instead of hardcoding it
+GITHUB_API_KEY="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" # Replace this or set it as an environment variable
 REPO_OWNER="diepnt90"
 REPO_NAME="SiteAuditing"
 README_PATH="README.md"
@@ -46,16 +46,14 @@ updated_readme_content=$(echo "$readme_content" | sed -e "/| Module Name/,/| Not
 updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 
 # Update the README on GitHub
+update_payload=$(jq -n --arg msg "Test update to README.md" \
+                    --arg content "$updated_readme_base64" \
+                    --arg sha "$readme_sha" \
+                    '{message: $msg, content: $content, sha: $sha}')
+
 update_response=$(curl -s -X PUT --header "Authorization: Bearer ${GITHUB_API_KEY}" \
     -H "Content-Type: application/json" \
-    -d @- "$readme_url" <<EOF
-{
-  "message": "Test update to README.md",
-  "content": "${updated_readme_base64}",
-  "sha": "${readme_sha}"
-}
-EOF
-)
+    -d "$update_payload" "$readme_url")
 
 # Check if the update was successful
 if echo "$update_response" | jq -e .commit.sha > /dev/null; then

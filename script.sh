@@ -28,6 +28,13 @@ new_table_content="${table_header}${dll_info}"
 # Get the current README content from GitHub
 readme_url="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${README_PATH}"
 readme_response=$(curl -s -H "Authorization: token ${GITHUB_API_KEY}" "$readme_url")
+
+# Check if README response is valid
+if [ "$(echo "$readme_response" | jq -r .message)" == "Not Found" ]; then
+    echo "README.md not found at the specified path: ${README_PATH}"
+    exit 1
+fi
+
 readme_sha=$(echo "$readme_response" | jq -r .sha)
 readme_content=$(echo "$readme_response" | jq -r .content | base64 --decode)
 

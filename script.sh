@@ -39,14 +39,15 @@ updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 
 # Update the README on GitHub
 update_response=$(curl -s -X PUT -H "Authorization: token ${GITHUB_API_KEY}" \
-    -d @- <<EOF
+    -H "Content-Type: application/json" \
+    -d @- "$readme_url" <<EOF
 {
   "message": "Update README with DLL files and modified dates",
   "content": "${updated_readme_base64}",
   "sha": "${readme_sha}"
 }
 EOF
-"$readme_url")
+)
 
 # Check if the update was successful
 if echo "$update_response" | jq -e .commit.sha > /dev/null; then

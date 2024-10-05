@@ -21,12 +21,11 @@ DECODED_CONTENT=$(echo "$CONTENT" | base64 --decode)
 
 # Find the table in the content
 TABLE_START=$(echo "$DECODED_CONTENT" | grep -n "| Module" | cut -d: -f1)
-TABLE_END=$(echo "$DECODED_CONTENT" | tail -n +$TABLE_START | grep -n "^$" | head -n 1 | cut -d: -f1)
-TABLE_END=$((TABLE_START + TABLE_END - 1))
+TABLE_END=$(awk "NR>$TABLE_START{if(NF==0){print NR;exit}}" <<< "$DECODED_CONTENT")
 
 # Extract the table header and footer
-TABLE_HEADER=$(echo "$DECODED_CONTENT" | sed -n "${TABLE_START}p")
-TABLE_FOOTER=$(echo "$DECODED_CONTENT" | sed -n "${TABLE_END}p")
+TABLE_HEADER=$(sed -n "${TABLE_START}p" <<< "$DECODED_CONTENT")
+TABLE_FOOTER=$(sed -n "${TABLE_END}p" <<< "$DECODED_CONTENT")
 
 # Generate new table content
 NEW_TABLE_CONTENT="$TABLE_HEADER"$'\n'
@@ -42,7 +41,11 @@ done
 NEW_TABLE_CONTENT+="$TABLE_FOOTER"
 
 # Replace the old table with the new one in the content
-NEW_CONTENT="${DECODED_CONTENT:0:$((TABLE_START-1))}"$'\n'"$NEW_TABLE_CONTENT"$'\n'"${DECODED_CONTENT:$TABLE_END}"
+NEW_CONTENT=$(awk -v start=$TABLE_START -v end=$TABLE_END -v new_table="$NEW_TABLE_CONTENT" '
+    NR < start {print}
+    NR == start {print new_table}
+    NR > end {print}
+' <<< "$DECODED_CONTENT")
 
 # Encode the new content
 ENCODED_CONTENT=$(echo "$NEW_CONTENT" | base64 -w 0)

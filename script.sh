@@ -17,15 +17,15 @@ CONTENT=$(echo "$RESPONSE" | grep '"content":' | cut -d '"' -f 4)
 SHA=$(echo "$RESPONSE" | grep '"sha":' | cut -d '"' -f 4)
 
 # Decode content
-DECODED_CONTENT=$(echo "$CONTENT" | base64 --decode)
+DECODED_CONTENT=$(echo "$CONTENT" | base64 -d)
 
 # Find the table in the content
 TABLE_START=$(echo "$DECODED_CONTENT" | grep -n "| Module" | cut -d: -f1)
-TABLE_END=$(awk "NR>$TABLE_START{if(NF==0){print NR;exit}}" <<< "$DECODED_CONTENT")
+TABLE_END=$(echo "$DECODED_CONTENT" | sed -n "$TABLE_START,\$p" | grep -n "^$" | head -1 | cut -d: -f1)
+TABLE_END=$((TABLE_START + TABLE_END - 1))
 
-# Extract the table header and footer
-TABLE_HEADER=$(sed -n "${TABLE_START}p" <<< "$DECODED_CONTENT")
-TABLE_FOOTER=$(sed -n "${TABLE_END}p" <<< "$DECODED_CONTENT")
+# Extract the table header
+TABLE_HEADER=$(echo "$DECODED_CONTENT" | sed -n "${TABLE_START}p")
 
 # Generate new table content
 NEW_TABLE_CONTENT="$TABLE_HEADER"$'\n'
@@ -38,17 +38,13 @@ for file in *.dll; do
     fi
 done
 
-NEW_TABLE_CONTENT+="$TABLE_FOOTER"
-
-# Replace the old table with the new one in the content
-NEW_CONTENT=$(awk -v start=$TABLE_START -v end=$TABLE_END -v new_table="$NEW_TABLE_CONTENT" '
-    NR < start {print}
-    NR == start {print new_table}
-    NR > end {print}
-' <<< "$DECODED_CONTENT")
+# Construct new content
+NEW_CONTENT=$(echo "$DECODED_CONTENT" | sed -n "1,${TABLE_START}p")
+NEW_CONTENT+="$NEW_TABLE_CONTENT"
+NEW_CONTENT+=$(echo "$DECODED_CONTENT" | sed -n "$TABLE_END,\$p")
 
 # Encode the new content
-ENCODED_CONTENT=$(echo "$NEW_CONTENT" | base64 -w 0)
+ENCODED_CONTENT=$(echo "$NEW_CONTENT" | base64 | tr -d '\n')
 
 # Update the file on GitHub
 curl -s -X PUT \

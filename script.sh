@@ -53,20 +53,15 @@ if [ -z "$CONTENT" ] || [ -z "$SHA" ]; then
   exit 1
 fi
 
-# Update the README.md content by replacing the existing table with the new one
-# Using awk to find and replace table
+# Write the content of README.md to a temp file
 echo "$CONTENT" > "$TEMP_FILE"
 
-awk -v new_table="$(printf '%s\n' "$UPDATED_TABLE")" '
-  BEGIN {print_table=0}
-  /| Module/ {print_table=1; print new_table; next}
-  print_table==0 {print}
-  print_table==1 && /^\|/ {next}
-  print_table==1 && !/^\|/ {print_table=0}
-' "$TEMP_FILE" > "updated_$TEMP_FILE"
+# Replace the existing table with the new table using sed
+sed -i '/| Module/,$d' "$TEMP_FILE" # Delete everything starting from "| Module"
+echo -e "$UPDATED_TABLE" >> "$TEMP_FILE" # Append the new table
 
 # Encode the updated README content in base64
-UPDATED_CONTENT=$(base64 -w 0 < updated_$TEMP_FILE)
+UPDATED_CONTENT=$(base64 -w 0 < "$TEMP_FILE")
 
 # Update README.md on GitHub
 echo "Updating README.md on GitHub..."
@@ -77,15 +72,3 @@ UPDATE_RESPONSE=$(curl -s -X PUT -H "Authorization: token $GITHUB_API_KEY" -H "A
   "sha": "$SHA"
 }
 EOF
-)
-
-# Clean up temporary files
-rm "$TEMP_FILE" "updated_$TEMP_FILE"
-
-# Check if the update was successful
-if echo "$UPDATE_RESPONSE" | grep -q '"commit"'; then
-  echo "README.md updated successfully."
-else
-  echo "Failed to update README.md. Response:"
-  echo "$UPDATE_RESPONSE"
-fi

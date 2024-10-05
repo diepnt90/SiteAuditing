@@ -27,7 +27,7 @@ new_table_content="${table_header}${dll_info}"
 
 # Get the current README content from GitHub
 readme_url="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${README_PATH}"
-readme_response=$(curl -s -H "Authorization: token ${GITHUB_API_KEY}" "$readme_url")
+readme_response=$(curl -s --header "Authorization: Bearer ${GITHUB_API_KEY}" "$readme_url")
 
 # Check if README response is valid
 if [ "$(echo "$readme_response" | jq -r .message)" == "Not Found" ]; then
@@ -46,13 +46,16 @@ updated_readme_content=$(echo "$readme_content" | sed -e "/| Module Name/,/| Not
 updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 
 # Update the README on GitHub
-update_response=$(curl -s -X PUT -H "Authorization: token ${GITHUB_API_KEY}" \
+update_response=$(curl -s -X PUT --header "Authorization: Bearer ${GITHUB_API_KEY}" \
     -H "Content-Type: application/json" \
-    -d "$(jq -n --arg msg "Update README with DLL files and modified dates" \
-        --arg content "$updated_readme_base64" \
-        --arg sha "$readme_sha" \
-        '{message: $msg, content: $content, sha: $sha}')" \
-    "$readme_url")
+    -d @- <<EOF
+{
+  "message": "Test update to README.md",
+  "content": "${updated_readme_base64}",
+  "sha": "${readme_sha}"
+}
+EOF
+"$readme_url")
 
 # Check if the update was successful
 if echo "$update_response" | jq -e .commit.sha > /dev/null; then

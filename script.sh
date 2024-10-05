@@ -1,74 +1,57 @@
 #!/bin/bash
 
-# Set variables
+# Install jq if it is not installed
+if ! command -v jq &> /dev/null; then
+    echo "jq is not installed. Installing jq..."
+    apt-get install jq -y
+fi
+
+# Configuration
+GITHUB_API_KEY="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" # Set this as an environment variable instead of hardcoding it
 REPO_OWNER="diepnt90"
 REPO_NAME="SiteAuditing"
 README_PATH="README.md"
-API_URL="https://api.github.com/repos/$REPO_OWNER/$REPO_NAME/contents/$README_PATH"
-TEMP_FILE="temp_readme.md"
+DLL_DIRECTORY="/app"
 
-# Insert your GitHub API key here
-GITHUB_API_KEY="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"
+# Get the modified date of all DLL files
+dll_info=""
+while IFS= read -r -d '' file; do
+    modified_date=$(stat -c "%y" "$file" | cut -d'.' -f1)
+    dll_name=$(basename "$file")
+    dll_info="${dll_info}| ${dll_name} | ${modified_date} |\n"
+done < <(find "$DLL_DIRECTORY" -type f -name "*.dll" -print0)
 
-# Ensure the API key is present
-if [ -z "$GITHUB_API_KEY" ]; then
-  echo "Please set your GitHub API key in the script (GITHUB_API_KEY)."
-  exit 1
-fi
+# Prepare the new table content
+table_header="| Module Name | Modified Date |\n|-------------|---------------|\n"
+new_table_content="${table_header}${dll_info}"
 
-# Ensure jq is installed, install it if not
-if ! command -v jq &> /dev/null; then
-  echo "jq is not installed. Installing jq..."
-  apt-get install -y jq
-fi
+# Get the current README content from GitHub
+readme_url="https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${README_PATH}"
+readme_response=$(curl -s -H "Authorization: token ${GITHUB_API_KEY}" "$readme_url")
+readme_sha=$(echo "$readme_response" | jq -r .sha)
+readme_content=$(echo "$readme_response" | jq -r .content | base64 --decode)
 
-# Scan all DLL files in the /app folder
-DLL_FILES=$(find /app -type f -name "*.dll")
+# Replace the old table with the new table in README content
+updated_readme_content=$(echo "$readme_content" | sed -e "/| Module Name/,/| Notes |/c\\$new_table_content")
 
-# Prepare the updated table content
-UPDATED_TABLE="| Module                     | Date modified |Current Version | Newest version|Link| Bug   |\n"
-UPDATED_TABLE+="| -------------------------- |:---------------:|:---------------:| -------------:|-------------:| -----:|\n"
+# Encode the updated content to base64
+updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 
-for DLL_FILE in $DLL_FILES; do
-  DLL_NAME=$(basename "$DLL_FILE")
-  MODIFIED_DATE=$(stat -c "%y" "$DLL_FILE" | cut -d' ' -f1)
-  UPDATED_TABLE+="| $DLL_NAME | $MODIFIED_DATE | | | | |\n"
-done
-
-# Fetch the README file from GitHub
-echo "Fetching README.md from GitHub..."
-RESPONSE=$(curl -s -H "Authorization: token $GITHUB_API_KEY" "$API_URL")
-
-if [ $? -ne 0 ]; then
-  echo "Failed to fetch README.md from GitHub."
-  exit 1
-fi
-
-# Extract content and SHA from the GitHub API response
-CONTENT=$(echo "$RESPONSE" | jq -r '.content' | base64 -d)
-SHA=$(echo "$RESPONSE" | jq -r '.sha')
-
-if [ -z "$CONTENT" ] || [ -z "$SHA" ]; then
-  echo "Failed to extract content or SHA from the GitHub response."
-  exit 1
-fi
-
-# Write the content of README.md to a temp file
-echo "$CONTENT" > "$TEMP_FILE"
-
-# Replace the existing table with the new table using sed
-sed -i '/| Module/,$d' "$TEMP_FILE" # Delete everything starting from "| Module"
-echo -e "$UPDATED_TABLE" >> "$TEMP_FILE" # Append the new table
-
-# Encode the updated README content in base64
-UPDATED_CONTENT=$(base64 -w 0 < "$TEMP_FILE")
-
-# Update README.md on GitHub
-echo "Updating README.md on GitHub..."
-UPDATE_RESPONSE=$(curl -s -X PUT -H "Authorization: token $GITHUB_API_KEY" -H "Accept: application/vnd.github.v3+json" "$API_URL" -d @- <<EOF
+# Update the README on GitHub
+update_response=$(curl -s -X PUT -H "Authorization: token ${GITHUB_API_KEY}" \
+    -d @- <<EOF
 {
-  "message": "Update DLL modified dates in README.md",
-  "content": "$UPDATED_CONTENT",
-  "sha": "$SHA"
+  "message": "Update README with DLL files and modified dates",
+  "content": "${updated_readme_base64}",
+  "sha": "${readme_sha}"
 }
 EOF
+"$readme_url")
+
+# Check if the update was successful
+if echo "$update_response" | jq -e .commit.sha > /dev/null; then
+    echo "README.md updated successfully."
+else
+    echo "Failed to update README.md."
+    echo "$update_response"
+fi

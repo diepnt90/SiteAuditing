@@ -35,6 +35,7 @@ if [ "$(echo "$readme_response" | jq -r .message)" == "Not Found" ]; then
     exit 1
 fi
 
+# Extract the SHA and current content of README
 readme_sha=$(echo "$readme_response" | jq -r .sha)
 readme_content=$(echo "$readme_response" | jq -r .content | base64 --decode)
 
@@ -47,14 +48,11 @@ updated_readme_base64=$(echo "$updated_readme_content" | base64 -w 0)
 # Update the README on GitHub
 update_response=$(curl -s -X PUT -H "Authorization: token ${GITHUB_API_KEY}" \
     -H "Content-Type: application/json" \
-    -d @- "$readme_url" <<EOF
-{
-  "message": "Update README with DLL files and modified dates",
-  "content": "${updated_readme_base64}",
-  "sha": "${readme_sha}"
-}
-EOF
-)
+    -d "$(jq -n --arg msg "Update README with DLL files and modified dates" \
+        --arg content "$updated_readme_base64" \
+        --arg sha "$readme_sha" \
+        '{message: $msg, content: $content, sha: $sha}')" \
+    "$readme_url")
 
 # Check if the update was successful
 if echo "$update_response" | jq -e .commit.sha > /dev/null; then

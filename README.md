@@ -68,7 +68,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Tracking.Core",
     "notes": ""
   },
   {
@@ -76,7 +76,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.files.shares/index.json",
     "notes": ""
   },
   {
@@ -84,7 +84,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/episerver/EPiServer.Labs.Find.Toolbox",
     "notes": ""
   },
   {
@@ -132,7 +132,8 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.security.keyvault.keys/index.json
+",
     "notes": ""
   },
   {
@@ -140,7 +141,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=Optimizely.OptiGPT.Client",
     "notes": ""
   },
   {
@@ -148,7 +149,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.Admin",
     "notes": ""
   },
   {
@@ -156,7 +157,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.sandbox/index.json",
     "notes": ""
   },
   {
@@ -164,7 +165,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Routing",
     "notes": ""
   },
   {
@@ -172,7 +173,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI",
     "notes": ""
   },
   {
@@ -180,7 +181,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/htmlagilitypack/index.json",
     "notes": ""
   },
   {
@@ -188,7 +189,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.ODP",
     "notes": ""
   },
   {
@@ -196,7 +197,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/polly/index.json",
     "notes": ""
   },
   {
@@ -204,7 +205,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/awssdk.s3/index.json",
     "notes": ""
   },
   {
@@ -228,7 +229,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Commerce",
     "notes": ""
   },
   {
@@ -244,7 +245,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.common/index.json",
     "notes": ""
   },
   {
@@ -252,7 +253,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/bouncycastle.crypto.dll/index.json",
     "notes": ""
   },
   {
@@ -260,7 +261,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/lucene.net/index.json",
     "notes": ""
   },
   {
@@ -292,7 +293,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Cms.HealthCheck",
     "notes": ""
   },
   {
@@ -300,7 +301,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/rotativa.aspnetcore/index.json",
     "notes": ""
   },
   {
@@ -308,7 +309,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.ImageLibrary.ImageSharp",
     "notes": ""
   },
   {
@@ -316,7 +317,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/wecantspell.hunspell/index.json",
     "notes": ""
   },
   {
@@ -324,7 +325,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/authorizenet/index.json",
     "notes": ""
   },
   {
@@ -332,7 +333,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.fonts/index.json",
     "notes": ""
   },
   {
@@ -348,7 +349,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/mimekit/index.json",
     "notes": ""
   },
   {
@@ -356,7 +357,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Framework.AspNetCore",
     "notes": ""
   },
   {
@@ -364,7 +365,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.KPI.Commerce",
     "notes": ""
   },
   {
@@ -372,7 +373,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.security.keyvault.secrets/index.json",
     "notes": ""
   },
   {
@@ -380,7 +381,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/wangkanai.system/index.json",
     "notes": ""
   },
   {
@@ -388,7 +389,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=Stott.Optimizely.RobotsHandler",
     "notes": ""
   },
   {
@@ -396,7 +397,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiCode.InspectInIndex",
     "notes": ""
   },
   {
@@ -404,7 +405,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.core/index.json",
     "notes": ""
   },
   {
@@ -412,7 +413,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Templating",
     "notes": ""
   },
   {
@@ -428,7 +429,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/x.pagedlist.mvc.core/index.json",
     "notes": ""
   },
   {
@@ -444,7 +445,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore",
     "notes": ""
   },
   {
@@ -460,7 +461,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Mvc",
     "notes": ""
   },
   {
@@ -468,7 +469,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/wangkanai/wangkanai",
     "notes": ""
   },
   {
@@ -484,7 +485,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Tracking.Commerce",
     "notes": ""
   },
   {
@@ -492,7 +493,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/castle.windsor/index.json",
     "notes": ""
   },
   {
@@ -508,7 +509,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.Samples",
     "notes": ""
   },
   {
@@ -516,7 +517,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Cms.Warmup",
     "notes": ""
   },
   {
@@ -524,7 +525,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/index.json",
     "notes": ""
   },
   {
@@ -540,7 +541,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CloudPlatform.Cms",
     "notes": ""
   },
   {
@@ -548,7 +549,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.Messaging",
     "notes": ""
   },
   {
@@ -564,7 +565,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/starkbank/ecdsa-dotnet",
     "notes": ""
   },
   {
@@ -572,7 +573,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/commandline.net/index.json",
     "notes": ""
   },
   {
@@ -580,7 +581,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.UI",
     "notes": ""
   },
   {
@@ -596,7 +597,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Cms",
     "notes": ""
   },
   {
@@ -604,7 +605,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/Geta/geta-optimizely-contenttypeicons",
     "notes": ""
   },
   {
@@ -620,7 +621,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.TinyMce",
     "notes": ""
   },
   {
@@ -628,7 +629,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.TagHelpers",
     "notes": ""
   },
   {
@@ -652,7 +653,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/sendgrid/index.json",
     "notes": ""
   },
   {
@@ -668,7 +669,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.UI",
     "notes": ""
   },
   {
@@ -676,7 +677,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.web/index.json",
     "notes": ""
   },
   {
@@ -684,7 +685,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.VisitorGroups",
     "notes": ""
   },
   {
@@ -692,7 +693,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json",
     "notes": ""
   },
   {
@@ -716,7 +717,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.UI.Admin",
     "notes": ""
   },
   {
@@ -740,7 +741,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.identity/index.json",
     "notes": ""
   },
   {
@@ -748,7 +749,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Session",
     "notes": ""
   },
   {
@@ -772,7 +773,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.AddOns.Helpers",
     "notes": ""
   },
   {
@@ -780,7 +781,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/j2n/index.json",
     "notes": ""
   },
   {
@@ -788,7 +789,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/mailkit/index.json",
     "notes": ""
   },
   {
@@ -804,7 +805,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/castle.core/index.json",
     "notes": ""
   },
   {
@@ -812,7 +813,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Framework",
     "notes": ""
   },
   {
@@ -820,7 +821,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.extensions.aspnetcore.dataprotection.keys/index.json",
     "notes": ""
   },
   {
@@ -828,7 +829,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/skiasharp/index.json",
     "notes": ""
   },
   {
@@ -860,7 +861,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Content.UI",
     "notes": ""
   },
   {
@@ -876,7 +877,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=Geta.Optimizely.Sitemaps.Commerce",
     "notes": ""
   },
   {
@@ -884,7 +885,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/skiasharp/index.json",
     "notes": ""
   },
   {
@@ -900,7 +901,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.optimizely.com/packages/episerver.marketing.testing/",
     "notes": ""
   },
   {
@@ -908,7 +909,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.messaging.servicebus/index.json",
     "notes": ""
   },
   {
@@ -924,7 +925,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.drawing/index.json",
     "notes": ""
   },
   {
@@ -932,7 +933,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=Geta.Optimizely.Sitemaps",
     "notes": ""
   },
   {
@@ -940,7 +941,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/humanizer/index.json",
     "notes": ""
   },
   {
@@ -956,7 +957,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/geta.mapping/index.json",
     "notes": ""
   },
   {
@@ -964,7 +965,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/csvhelper/index.json",
     "notes": ""
   },
   {
@@ -972,7 +973,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/documentformat.openxml/index.json",
     "notes": ""
   },
   {
@@ -988,7 +989,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Azure",
     "notes": ""
   },
   {
@@ -1004,7 +1005,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/SixLabors/ImageSharp",
     "notes": ""
   },
   {
@@ -1020,7 +1021,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.core.amqp/index.json",
     "notes": ""
   },
   {
@@ -1028,7 +1029,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/mono.texttemplating/index.json",
     "notes": ""
   },
   {
@@ -1044,7 +1045,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.HtmlHelpers",
     "notes": ""
   },
   {
@@ -1052,7 +1053,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CloudPlatform.Commerce",
     "notes": ""
   },
   {
@@ -1060,7 +1061,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=Baaijte.Optimizely.ImageSharp.Web",
     "notes": ""
   },
   {
@@ -1068,7 +1069,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/bouncycastle.cryptography/index.json",
     "notes": ""
   },
   {
@@ -1084,7 +1085,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms",
     "notes": ""
   },
   {
@@ -1092,7 +1093,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/x.pagedlist/index.json",
     "notes": ""
   },
   {
@@ -1100,7 +1101,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/restsharp/index.json",
     "notes": ""
   },
   {
@@ -1116,7 +1117,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/awssdk.core/index.json",
     "notes": ""
   },
   {
@@ -1140,7 +1141,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/entityframework/index.json",
     "notes": ""
   },
   {
@@ -1148,7 +1149,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Framework",
     "notes": ""
   },
   {
@@ -1156,7 +1157,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.Core",
     "notes": ""
   },
   {
@@ -1188,7 +1189,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.analysis.common/index.json",
     "notes": ""
   },
   {
@@ -1196,7 +1197,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Commerce",
     "notes": ""
   },
   {
@@ -1204,7 +1205,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.AspNetIdentity",
     "notes": ""
   },
   {
@@ -1212,7 +1213,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.KPI",
     "notes": ""
   },
   {
@@ -1236,7 +1237,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.Settings",
     "notes": ""
   },
   {
@@ -1252,7 +1253,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Labs.LanguageManager",
     "notes": ""
   },
   {
@@ -1260,7 +1261,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Common",
     "notes": ""
   },
   {
@@ -1268,7 +1269,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=GoogleMapsEditor",
     "notes": ""
   },
   {
@@ -1276,7 +1277,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.queryparser/index.json",
     "notes": ""
   },
   {
@@ -1284,7 +1285,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.web.providers.azure/index.json",
     "notes": ""
   },
   {
@@ -1300,7 +1301,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://github.com/mono/SkiaSharp",
     "notes": ""
   },
   {
@@ -1308,7 +1309,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.queries/index.json",
     "notes": ""
   },
   {
@@ -1316,7 +1317,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Hosting",
     "notes": ""
   },
   {
@@ -1324,7 +1325,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Profiles.Client.Common",
     "notes": ""
   },
   {
@@ -1332,7 +1333,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.extensions.aspnetcore.dataprotection.blobs/index.json",
     "notes": ""
   },
   {
@@ -1356,7 +1357,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.queues/index.json",
     "notes": ""
   },
   {
@@ -1412,7 +1413,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/system.servicemodel.nettcp/index.json",
     "notes": ""
   },
   {
@@ -1420,7 +1421,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/system.drawing.common/index.json",
     "notes": ""
   },
   {
@@ -1444,7 +1445,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/microsoft.applicationinsights.aspnetcore/index.json",
     "notes": ""
   },
   {

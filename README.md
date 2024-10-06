@@ -8,7 +8,7 @@
         "notes": ""
     },
     {
-        "module_name": "Mogul.SeoManager.Commerce.dll",
+        "module_name": "Mogul.SeoManager.dll",
         "modified_date": "",
         "current_version": "",
         "newest_version": "",

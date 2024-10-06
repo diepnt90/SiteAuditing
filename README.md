@@ -44,7 +44,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/microsoft.entityframeworkcore/index.json",
     "notes": ""
   },
   {
@@ -52,7 +52,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.Azure",
     "notes": ""
   },
   {
@@ -68,7 +68,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json",
     "notes": ""
   },
   {
@@ -76,7 +76,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/microsoft.applicationinsights.profiler.core/index.json",
     "notes": ""
   },
   {
@@ -84,7 +84,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/windowsazure.storage/index.json",
     "notes": ""
   },
   {
@@ -100,7 +100,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.wstrust/index.jso",
     "notes": ""
   },
   {
@@ -108,7 +108,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3-flatcontainer/polly.core/index.json",
     "notes": ""
   },
   {

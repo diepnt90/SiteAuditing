@@ -1,0 +1,73 @@
+#!/bin/bash
+
+# Variables
+JSON_URL="https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/README.md"
+TEMP_FOLDER="./temp_folder"
+JSON_FILE="$TEMP_FOLDER/modules.json"
+OUTPUT_FILE="$TEMP_FOLDER/updated_modules.json"
+APP_FOLDER="/app"
+
+# Step 1: Create a temporary folder in the current directory
+echo "Creating temporary folder at ./temp_folder..."
+mkdir -p "./temp_folder"
+
+# Step 2: Download JSON from GitHub
+echo "Downloading JSON file..."
+curl -s -L "$JSON_URL" -o "$JSON_FILE"
+
+# Check if JSON file was downloaded
+if [ ! -f "$JSON_FILE" ]; then
+    echo "Error: Failed to download JSON file"
+    exit 1
+fi
+
+# Validate that the downloaded file is proper JSON
+if ! jq empty "$JSON_FILE" > /dev/null 2>&1; then
+    echo "Error: Downloaded file is not valid JSON. Please verify the contents."
+    exit 1
+fi
+
+# Step 3: Gather all DLL files from the /app folder
+echo "Scanning DLL files in the /app folder..."
+DLL_FILES=$(find "$APP_FOLDER" -type f -name "*.dll")
+
+# Load the existing JSON data
+json_data=$(cat "$JSON_FILE")
+
+# Step 4: Iterate through each gathered DLL and update JSON if necessary
+for dll in $DLL_FILES; do
+    module_name=$(basename "$dll")
+    
+    # Check if module_name already exists in the JSON
+    if echo "$json_data" | jq -e --arg module_name "$module_name" '.[] | select(.module_name == $module_name)' > /dev/null; then
+        echo "Module $module_name already exists in the JSON. Skipping."
+    else
+        echo "Adding module $module_name to JSON."
+
+        # Create a JSON object for the new module with blank values
+        new_module=$(jq -n \
+            --arg module_name "$module_name" \
+            --arg modified_date "" \
+            --arg current_version "" \
+            --arg newest_version "" \
+            --arg links "" \
+            --arg notes "" \
+            '{
+                "module_name": $module_name,
+                "modified_date": $modified_date,
+                "current_version": $current_version,
+                "newest_version": $newest_version,
+                "links": $links,
+                "notes": $notes
+            }')
+
+        # Add the new module to the existing JSON data
+        json_data=$(echo "$json_data" | jq --argjson new_module "$new_module" '. += [$new_module]')
+    fi
+done
+
+# Step 5: Write updated JSON data to output file
+echo "$json_data" > "$OUTPUT_FILE"
+
+# Output final result
+echo "Updated JSON file is saved at: $OUTPUT_FILE"

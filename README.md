@@ -5,7 +5,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Mogul.SEO.Manager.Package",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Mogul.SeoManager.Commerce.dll",
@@ -13,7 +14,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.Common.dll",
@@ -21,15 +23,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Search.Extensions.Azure.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Commerce.Azure.dll",
@@ -37,7 +32,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.Azure",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Find.UI.dll",
@@ -45,7 +41,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Hunspellx64.dll",
@@ -53,7 +50,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Polly.Core.dll",
@@ -61,7 +59,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/polly.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Tracking.Core.dll",
@@ -69,7 +68,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Tracking.Core",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Storage.Files.Shares.dll",
@@ -77,7 +77,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.files.shares/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Labs.Find.Toolbox.dll",
@@ -85,7 +86,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/episerver/EPiServer.Labs.Find.Toolbox",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Marketing.Testing.Dal.dll",
@@ -93,7 +95,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.CMS.Core.dll",
@@ -101,15 +104,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Search.LuceneAzureSearchProvider.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "TWS.Search.dll",
@@ -117,7 +113,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": ",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Shell.UI.dll",
@@ -125,16 +122,17 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Security.KeyVault.Keys.dll",
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "https://api.nuget.org/v3-flatcontainer/azure.security.keyvault.keys/index.json
-",
-    "notes": ""
+    "links": "https://api.nuget.org/v3-flatcontainer/azure.security.keyvault.keys/index.json",
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Optimizely.OptiGPT.Client.dll",
@@ -142,7 +140,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Optimizely.OptiGPT.Client",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.UI.Admin.dll",
@@ -150,7 +149,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.Admin",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Lucene.Net.Sandbox.dll",
@@ -158,7 +158,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.sandbox/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.Routing.dll",
@@ -166,7 +167,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Routing",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.UI.dll",
@@ -174,7 +176,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "HtmlAgilityPack.dll",
@@ -182,7 +185,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/htmlagilitypack/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.ODP.dll",
@@ -190,7 +194,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.ODP",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Polly.dll",
@@ -198,7 +203,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/polly/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "AWSSDK.S3.dll",
@@ -206,7 +212,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/awssdk.s3/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Shell.dll",
@@ -214,7 +221,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Licensing.dll",
@@ -222,7 +230,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Find.Commerce.dll",
@@ -230,15 +239,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Commerce",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Commerce.Plugins.Shipping.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Storage.Common.dll",
@@ -246,7 +248,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.common/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "BouncyCastle.Crypto.dll",
@@ -254,7 +257,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/bouncycastle.crypto.dll/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Lucene.Net.dll",
@@ -262,7 +266,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/lucene.net/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.Shell.dll",
@@ -270,15 +275,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Search.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Commerce.Bolt.dll",
@@ -286,7 +284,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Cms.HealthCheck.dll",
@@ -294,7 +293,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Cms.HealthCheck",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Rotativa.AspNetCore.dll",
@@ -302,7 +302,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/rotativa.aspnetcore/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.ImageLibrary.ImageSharp.dll",
@@ -310,7 +311,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.ImageLibrary.ImageSharp",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "WeCantSpell.Hunspell.dll",
@@ -318,7 +320,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/wecantspell.hunspell/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "AuthorizeNet.dll",
@@ -326,7 +329,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/authorizenet/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SixLabors.Fonts.dll",
@@ -334,7 +338,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.fonts/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.Analytics.dll",
@@ -342,7 +347,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "MimeKit.dll",
@@ -350,7 +356,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/mimekit/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Framework.AspNetCore.dll",
@@ -358,7 +365,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Framework.AspNetCore",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Marketing.KPI.Commerce.dll",
@@ -366,7 +374,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.KPI.Commerce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Security.KeyVault.Secrets.dll",
@@ -374,7 +383,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.security.keyvault.secrets/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Wangkanai.System.dll",
@@ -382,7 +392,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/wangkanai.system/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Stott.Optimizely.RobotsHandler.dll",
@@ -390,7 +401,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Stott.Optimizely.RobotsHandler",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiCode.InspectInIndex.dll",
@@ -398,7 +410,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiCode.InspectInIndex",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Core.dll",
@@ -406,7 +419,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.Templating.dll",
@@ -414,7 +428,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Templating",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Data.dll",
@@ -422,7 +437,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "X.PagedList.Mvc.Core.dll",
@@ -430,7 +446,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/x.pagedlist.mvc.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.ETL.dll",
@@ -438,7 +455,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "01"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.dll",
@@ -446,7 +464,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.dll",
@@ -454,7 +473,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.Mvc.dll",
@@ -462,7 +482,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.Mvc",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Wangkanai.Hosting.dll",
@@ -470,7 +491,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/wangkanai/wangkanai",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Events.dll",
@@ -478,7 +500,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Tracking.Commerce.dll",
@@ -486,7 +509,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Tracking.Commerce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Castle.Windsor.dll",
@@ -494,7 +518,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/castle.windsor/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.Internal.Migration.dll",
@@ -502,7 +527,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Forms.Samples.dll",
@@ -510,7 +536,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.Samples",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.Warmup.dll",
@@ -518,7 +545,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Cms.Warmup",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Storage.Blobs.dll",
@@ -526,15 +554,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.blobs/index.json",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Commerce.Workflow.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.CloudPlatform.Cms.dll",
@@ -542,7 +563,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CloudPlatform.Cms",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPIServer.Marketing.Messaging.dll",
@@ -550,7 +572,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.Messaging",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.CMS.dll",
@@ -558,7 +581,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "StarkbankEcdsa.dll",
@@ -566,7 +590,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/starkbank/ecdsa-dotnet",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "CommandLine.dll",
@@ -574,7 +599,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/commandline.net/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.UI.dll",
@@ -582,7 +608,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.UI",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Find.Statistics.dll",
@@ -590,7 +617,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Find.Cms.dll",
@@ -598,7 +626,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Cms",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Geta.Optimizely.ContentTypeIcons.dll",
@@ -606,15 +635,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/Geta/geta-optimizely-contenttypeicons",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.MetaDataPlus.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.TinyMce.dll",
@@ -622,7 +644,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.TinyMce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.TagHelpers.dll",
@@ -630,7 +653,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.TagHelpers",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Mogul.SeoManager.Views.dll",
@@ -638,7 +662,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Hunspellx86.dll",
@@ -646,7 +671,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "SendGrid.dll",
@@ -654,7 +680,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/sendgrid/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.LinkAnalyzer.dll",
@@ -662,7 +689,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Forms.UI.dll",
@@ -670,7 +698,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.UI",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SixLabors.ImageSharp.Web.dll",
@@ -678,7 +707,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.web/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.UI.VisitorGroups.dll",
@@ -686,7 +716,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.VisitorGroups",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Newtonsoft.Json.dll",
@@ -694,7 +725,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/newtonsoft.json/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.Website.dll",
@@ -702,7 +734,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "TWS.Commerce.Shared.dll",
@@ -710,7 +743,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Commerce.UI.Admin.dll",
@@ -718,7 +752,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce.UI.Admin",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.Shell.UI.dll",
@@ -726,7 +761,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "TWS.Search.Find.dll",
@@ -734,7 +770,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Azure.Identity.dll",
@@ -742,7 +779,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.identity/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Session.dll",
@@ -750,7 +788,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Session",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.CdnSupport.dll",
@@ -758,7 +797,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Find.Optimizations.dll",
@@ -766,7 +806,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.AddOns.Helpers.dll",
@@ -774,7 +815,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.AddOns.Helpers",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "J2N.dll",
@@ -782,7 +824,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/j2n/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "MailKit.dll",
@@ -790,7 +833,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/mailkit/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Data.Cache.dll",
@@ -798,7 +842,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Castle.Core.dll",
@@ -806,7 +851,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/castle.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Find.Framework.dll",
@@ -814,7 +860,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.Framework",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Extensions.AspNetCore.DataProtection.Keys.dll",
@@ -822,7 +869,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.extensions.aspnetcore.dataprotection.keys/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SkiaSharp.dll",
@@ -830,7 +878,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/skiasharp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "ICSharpCode.SharpZipLib.dll",
@@ -838,23 +887,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.BusinessFoundation.Data.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.DataProvider.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Personalization.Content.UI.dll",
@@ -862,15 +896,17 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Content.UI",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Find.dll",
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
-    "notes": ""
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find",
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Geta.Optimizely.Sitemaps.Commerce.dll",
@@ -878,7 +914,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Geta.Optimizely.Sitemaps.Commerce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Wangkanai.Detection.dll",
@@ -886,7 +923,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/skiasharp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.ApplicationModules.dll",
@@ -894,7 +932,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Marketing.Testing.Core.dll",
@@ -902,7 +941,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.optimizely.com/packages/episerver.marketing.testing/",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Messaging.ServiceBus.dll",
@@ -910,7 +950,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.messaging.servicebus/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Marketing.Testing.Web.dll",
@@ -918,7 +959,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SixLabors.ImageSharp.Drawing.dll",
@@ -926,7 +968,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.drawing/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Geta.Optimizely.Sitemaps.dll",
@@ -934,7 +977,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Geta.Optimizely.Sitemaps",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Humanizer.dll",
@@ -942,7 +986,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/humanizer/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.UI.CustomerService.dll",
@@ -950,7 +995,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Geta.Mapping.dll",
@@ -958,7 +1004,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/geta.mapping/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "CsvHelper.dll",
@@ -966,7 +1013,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/csvhelper/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "DocumentFormat.OpenXml.dll",
@@ -974,7 +1022,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/documentformat.openxml/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Business.Commerce.dll",
@@ -982,7 +1031,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Azure.dll",
@@ -990,15 +1040,17 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Azure",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.dll",
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
-    "notes": ""
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Commerce",
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SixLabors.ImageSharp.dll",
@@ -1006,15 +1058,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/SixLabors/ImageSharp",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Commerce.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Core.Amqp.dll",
@@ -1022,7 +1067,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.core.amqp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Mono.TextTemplating.dll",
@@ -1030,15 +1076,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/mono.texttemplating/index.json",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Search.Extensions.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.AspNetCore.HtmlHelpers.dll",
@@ -1046,7 +1085,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.AspNetCore.HtmlHelpers",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.CloudPlatform.Commerce.dll",
@@ -1054,7 +1094,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CloudPlatform.Commerce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Baaijte.Optimizely.ImageSharp.Web.dll",
@@ -1062,7 +1103,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=Baaijte.Optimizely.ImageSharp.Web",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "BouncyCastle.Cryptography.dll",
@@ -1070,7 +1112,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/bouncycastle.cryptography/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "TWS.IOC.dll",
@@ -1078,7 +1121,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Forms.dll",
@@ -1086,7 +1130,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "X.PagedList.dll",
@@ -1094,7 +1139,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/x.pagedlist/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "RestSharp.dll",
@@ -1102,15 +1148,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/restsharp/index.json",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Commerce.Website.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "AWSSDK.Core.dll",
@@ -1118,7 +1157,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/awssdk.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Newtonsoft.Json.Bson.dll",
@@ -1126,7 +1166,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "TWS.Commerce.Core.dll",
@@ -1134,7 +1175,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EntityFramework.dll",
@@ -1142,7 +1184,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/entityframework/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Framework.dll",
@@ -1150,7 +1193,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Framework",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Forms.Core.dll",
@@ -1158,31 +1202,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms.Core",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Commerce.Plugins.Payment.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.SqlDataProvider.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
-  },
-  {
-    "module_name": "Mediachase.Search.LuceneSearchProvider.dll",
-    "modified_date": "",
-    "current_version": "",
-    "newest_version": "",
-    "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Lucene.Net.Analysis.Common.dll",
@@ -1190,7 +1211,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.analysis.common/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Personalization.Commerce.dll",
@@ -1198,7 +1220,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Commerce",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.UI.AspNetIdentity.dll",
@@ -1206,7 +1229,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.AspNetIdentity",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Marketing.KPI.dll",
@@ -1214,7 +1238,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Marketing.KPI",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EntityFramework.SqlServer.dll",
@@ -1222,7 +1247,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.ImageLibrary.dll",
@@ -1230,7 +1256,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.UI.Settings.dll",
@@ -1238,7 +1265,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.CMS.UI.Settings",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Cms.TinyMce.SpellChecker.dll",
@@ -1246,7 +1274,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Labs.LanguageManager.dll",
@@ -1254,7 +1283,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Labs.LanguageManager",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Personalization.Common.dll",
@@ -1262,7 +1292,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Personalization.Common",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "GoogleMapsEditor.dll",
@@ -1270,7 +1301,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=GoogleMapsEditor",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Lucene.Net.QueryParser.dll",
@@ -1278,7 +1310,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.queryparser/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "SixLabors.ImageSharp.Web.Providers.Azure.dll",
@@ -1286,7 +1319,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/sixlabors.imagesharp.web.providers.azure/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "sni.dll",
@@ -1294,7 +1328,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "libSkiaSharp.dll",
@@ -1302,7 +1337,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://github.com/mono/SkiaSharp",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Lucene.Net.Queries.dll",
@@ -1310,7 +1346,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/lucene.net.queries/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Hosting.dll",
@@ -1318,7 +1355,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Hosting",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Profiles.Client.Common.dll",
@@ -1326,7 +1364,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Profiles.Client.Common",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Azure.Extensions.AspNetCore.DataProtection.Blobs.dll",
@@ -1334,7 +1373,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.extensions.aspnetcore.dataprotection.blobs/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "EPiServer.Commerce.Reporting.dll",
@@ -1342,7 +1382,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "EPiServer.Enterprise.dll",
@@ -1350,7 +1391,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Azure.Storage.Queues.dll",
@@ -1358,7 +1400,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/azure.storage.queues/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.dll",
@@ -1366,7 +1409,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.applicationinsights/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.dll",
@@ -1374,7 +1418,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.entityframeworkcore/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Tokens.dll",
@@ -1382,7 +1427,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.tokens/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.Profiler.Core.dll",
@@ -1390,7 +1436,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.applicationinsights.profiler.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.WindowsAzure.Storage.dll",
@@ -1398,7 +1445,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/windowsazure.storage/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Protocols.WsTrust.dll",
@@ -1406,7 +1454,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.identitymodel.protocols.wstrust/index.jso",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.NetTcp.dll",
@@ -1414,7 +1463,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/system.servicemodel.nettcp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Drawing.Common.dll",
@@ -1422,7 +1472,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/system.drawing.common/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Azure.ServiceBus.dll",
@@ -1430,7 +1481,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Common.Utilities.dll",
@@ -1438,7 +1490,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.AspNetCore.dll",
@@ -1446,7 +1499,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3-flatcontainer/microsoft.applicationinsights.aspnetcore/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.Primitives.dll",
@@ -1454,7 +1508,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.primitives/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Private.ServiceModel.resources.dll",
@@ -1462,7 +1517,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.Workspaces.resources.dll",
@@ -1470,7 +1526,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll",
@@ -1478,7 +1535,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp.workspaces/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.resources.dll",
@@ -1486,7 +1544,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.CSharp.resources.dll",
@@ -1494,7 +1553,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.IO.Packaging.dll",
@@ -1502,7 +1562,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.io.packaging/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Identity.Client.Extensions.Msal.dll",
@@ -1510,7 +1571,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identity.client.extensions.msal/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.CSharp.Workspaces.dll",
@@ -1518,7 +1580,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp.workspaces/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Windows.Extensions.dll",
@@ -1526,7 +1589,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.windows.extensions/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Contract.Agent.dll",
@@ -1534,7 +1598,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.EventPipe.Orchestration.dll",
@@ -1542,7 +1607,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.Win32.SystemEvents.dll",
@@ -1550,7 +1616,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.Rest.ClientRuntime.dll",
@@ -1558,7 +1625,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.Design.dll",
@@ -1566,7 +1634,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.design/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Orchestration.dll",
@@ -1574,7 +1643,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.IdentityModel.Clients.ActiveDirectory.dll",
@@ -1582,7 +1652,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.Diagnostics.PerformanceCounter.dll",
@@ -1590,7 +1661,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.diagnostics.performancecounter/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AI.PerfCounterCollector.dll",
@@ -1598,7 +1670,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.perfcountercollector/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Composition.Convention.dll",
@@ -1606,7 +1679,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.convention/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Utilities.dll",
@@ -1614,7 +1688,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Agent.FrontendClient.dll",
@@ -1622,7 +1697,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.Azure.Amqp.dll",
@@ -1630,7 +1706,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.azure.amqp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Azure.KeyVault.Core.dll",
@@ -1638,7 +1715,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.ServiceModel.Security.dll",
@@ -1646,7 +1724,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.security/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Agent.Exceptions.dll",
@@ -1654,7 +1733,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.IO.Hashing.dll",
@@ -1662,7 +1742,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.io.hashing/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AspNetCore.Authentication.OpenIdConnect.dll",
@@ -1670,7 +1751,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.authentication.openidconnect/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IO.RecyclableMemoryStream.dll",
@@ -1678,7 +1760,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.io.recyclablememorystream/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.Federation.dll",
@@ -1686,7 +1769,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.federation/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Security.Cryptography.ProtectedData.dll",
@@ -1694,7 +1778,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.security.cryptography.protecteddata/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Extensions.DependencyModel.dll",
@@ -1702,7 +1787,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.extensions.dependencymodel/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.dll",
@@ -1710,7 +1796,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.ProcessMonitor.dll",
@@ -1718,7 +1805,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.CodeDom.dll",
@@ -1726,7 +1814,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.codedom/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Configuration.ConfigurationManager.dll",
@@ -1734,7 +1823,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.configuration.configurationmanager/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.HttpPipeline.dll",
@@ -1742,7 +1832,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.IdentityModel.Tokens.Saml.dll",
@@ -1750,7 +1841,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.tokens.saml/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Composition.TypedParts.dll",
@@ -1758,7 +1850,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.typedparts/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Linq.Async.dll",
@@ -1766,7 +1859,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.linq.async/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Contract.Agent.Profiler.dll",
@@ -1774,7 +1868,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.Razor.dll",
@@ -1782,7 +1877,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.razor/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Extensions.Logging.ApplicationInsights.dll",
@@ -1790,7 +1886,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.extensions.logging.applicationinsights/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.Abstractions.dll",
@@ -1798,7 +1895,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.abstractions/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Logging.dll",
@@ -1806,7 +1904,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.AspNetCore.Mvc.Razor.Extensions.dll",
@@ -1814,7 +1913,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.mvc.razor.extensions/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Rest.ClientRuntime.Azure.dll",
@@ -1822,7 +1922,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.IdentityModel.Tokens.Jwt.dll",
@@ -1830,7 +1931,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.identitymodel.tokens.jwt/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
@@ -1838,7 +1940,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.protocols.openidconnect/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Protocols.dll",
@@ -1846,7 +1949,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.protocols/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Diagnostics.NETCore.Client.dll",
@@ -1854,7 +1958,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.diagnostics.netcore.client/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.Profiler.Logging.dll",
@@ -1862,7 +1967,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.profiler.core/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.Profiler.HostingStartup30.dll",
@@ -1870,7 +1976,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.AspNetCore.Razor.Language.dll",
@@ -1878,7 +1985,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.razor.language/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.SqlServer.dll",
@@ -1886,7 +1994,8 @@
     "current_version": "",
     "newest_version": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.sqlserver/index.json",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Runtime.Caching.dll",
@@ -1894,7 +2003,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.runtime.caching/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AspNetCore.JsonPatch.dll",
@@ -1902,7 +2012,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.jsonpatch/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.Duplex.dll",
@@ -1910,7 +2021,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.duplex/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Composition.AttributedModel.dll",
@@ -1918,7 +2030,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.attributedmodel/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AI.DependencyCollector.dll",
@@ -1926,7 +2039,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.dependencycollector/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Logging.dll",
@@ -1934,7 +2048,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.logging/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Data.SqlClient.dll",
@@ -1942,7 +2057,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.data.sqlclient/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Threading.AccessControl.dll",
@@ -1950,7 +2066,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.threading.accesscontrol/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Net.Http.Formatting.dll",
@@ -1958,7 +2075,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.SqlServer.Server.dll",
@@ -1966,7 +2084,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Contract.Http.dll",
@@ -1974,7 +2093,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.IdentityModel.Xml.dll",
@@ -1982,7 +2102,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.xml/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.dll",
@@ -1990,7 +2111,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.ServiceModel.Http.dll",
@@ -1998,7 +2120,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.http/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.Relational.dll",
@@ -2006,7 +2129,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.relational/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
@@ -2014,7 +2138,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.identity.entityframeworkcore/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.CSharp.dll",
@@ -2022,7 +2147,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.IdentityModel.Abstractions.dll",
@@ -2030,7 +2156,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.abstractions/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AI.EventCounterCollector.dll",
@@ -2038,7 +2165,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll",
@@ -2046,7 +2174,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.mvc.newtonsoftjson/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Data.SqlClient.dll",
@@ -2054,7 +2183,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.data.sqlclient/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Security.Permissions.dll",
@@ -2062,7 +2192,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.security.permissions/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.CodeAnalysis.Workspaces.dll",
@@ -2070,7 +2201,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.workspaces.common/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Identity.Client.dll",
@@ -2078,7 +2210,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identity.client/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Composition.Hosting.dll",
@@ -2086,7 +2219,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.hosting/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Bcl.AsyncInterfaces.dll",
@@ -2094,7 +2228,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.bcl.asyncinterfaces/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Memory.Data.dll",
@@ -2102,7 +2237,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.memory.data/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Azure.Services.AppAuthentication.dll",
@@ -2110,7 +2246,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.IdentityModel.JsonWebTokens.dll",
@@ -2118,7 +2255,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.jsonwebtokens/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "System.Composition.Runtime.dll",
@@ -2126,7 +2264,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.runtime/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.AI.WindowsServer.dll",
@@ -2134,7 +2273,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "Microsoft.AI.ServerTelemetryChannel.dll",
@@ -2142,7 +2282,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.ServiceModel.Syndication.dll",
@@ -2150,7 +2291,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.syndication/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.Data.SqlClient.SNI.dll",
@@ -2158,7 +2300,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.data.sqlclient.sni/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ServiceProfiler.Agent.FrontendClient.Profiler.dll",
@@ -2166,7 +2309,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "",
-    "notes": ""
+    "notes": "",
+    "tag": "0"
   },
   {
     "module_name": "System.Private.ServiceModel.dll",
@@ -2174,7 +2318,8 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/system.private.servicemodel/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
   },
   {
     "module_name": "Microsoft.ApplicationInsights.Profiler.AspNetCore.dll",
@@ -2182,6 +2327,133 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.profiler.aspnetcore/index.json",
-    "notes": ""
+    "notes": "",
+    "tag": "1"
+  },
+  {
+    "module_name": "Mediachase.Search.Extensions.Azure.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Search.LuceneAzureSearchProvider.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Commerce.Plugins.Shipping.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Search.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Commerce.Workflow.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.MetaDataPlus.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.BusinessFoundation.Data.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.DataProvider.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Commerce.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Search.Extensions.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Commerce.Website.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Commerce.Plugins.Payment.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.SqlDataProvider.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
+  },
+  {
+    "module_name": "Mediachase.Search.LuceneSearchProvider.dll",
+    "modified_date": "",
+    "current_version": "",
+    "newest_version": "",
+    "links": "",
+    "notes": "",
+    "tag": "0"
   }
 ]

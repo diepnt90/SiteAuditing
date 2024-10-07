@@ -24,14 +24,15 @@ then
     apt-get install -y jq
 fi
 
-# Step 5: Read the content of README.md
-readme_content=$(cat "$readme_file")
+# Step 5: Read the content of README.md and format it to eliminate any formatting discrepancies
+readme_content=$(cat "$readme_file" | jq '.')
 
 # Loop through all DLLs in the /app directory
 for dll in "$app_directory"/*.dll; do
   # Skip if no DLLs found
   [[ -e "$dll" ]] || continue
 
+  # Get the name of the DLL file, including the .dll extension
   dll_name=$(basename "$dll")
 
   # Get the Modify date using stat command

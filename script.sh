@@ -1,104 +1,40 @@
 #!/bin/bash
 
-# Function to print debug messages
-debug() {
-    echo "[DEBUG] $1"
-}
+# Step 1: Create a temporary folder
+temp_folder="temp_folder"
+mkdir -p "$temp_folder"
+cd "$temp_folder" || exit
 
-error() {
-    echo "[ERROR] $1"
-}
+# Step 2: Download README.md
+curl -o README.md https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/README.md
 
-debug "Script started"
+# Step 3: Scan all DLLs in the /app directory
+app_directory="../app"
+readme_file="README.md"
 
-# 1. Install jq using apt-get if not already installed
-if ! command -v jq &> /dev/null; then
-    debug "jq is not installed. Attempting to install..."
-    if [ "$(id -u)" -ne 0 ]; then
-        error "This script requires sudo privileges to install jq. Please run with sudo or as root."
-        exit 1
-    fi
-    apt-get install -y jq
-    debug "jq installation completed"
-else
-    debug "jq is already installed"
+if [[ ! -d "$app_directory" ]]; then
+  echo "The directory $app_directory does not exist."
+  exit 1
 fi
 
-# 2. Create temp_folder in the current directory
-mkdir -p temp_folder
-debug "temp_folder created"
+# Loop through all DLLs in the /app directory
+for dll in "$app_directory"/*.dll; do
+  # Skip if no DLLs found
+  [[ -e "$dll" ]] || continue
 
-# 3. Go to temp_folder
-cd temp_folder
-debug "Changed directory to temp_folder"
+  dll_name=$(basename "$dll")
+  dll_modified_date=$(date -r "$dll" "+%Y-%m-%d %H:%M:%S")
 
-# 4. Download the JSON file
-curl -L https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/README.md -o modules.json
-debug "JSON file downloaded"
-
-# Function to extract version from deps.json
-extract_version() {
-    local deps_file=$1
-    local dll_name=$2
-    jq -r "to_entries[] | select(.value.runtime[\"lib/net6.0/${dll_name}\"] != null) | .key | split(\"/\")[1]" "$deps_file"
-}
-
-# 5 & 6. Process DLL files
-debug "Starting to process DLL files"
-for dll in /app/*.dll; do
-    if [ -f "$dll" ]; then
-        filename=$(basename "$dll")
-        debug "Processing $filename"
-        modified_date=$(stat -c %y "$dll")
-        
-        # Update existing entries or create new ones
-        jq --arg filename "$filename" \
-           --arg modified_date "$modified_date" \
-           '(.[] | select(.module_name == $filename and .tag == "1") | .modified_date) |= $modified_date' modules.json > temp.json && mv temp.json modules.json
-        debug "Updated modified date for $filename"
-
-        # Check for version in deps.json files
-        for deps_file in /app/*.deps.json; do
-            if [ -f "$deps_file" ]; then
-                debug "Checking $deps_file for version of $filename"
-                version=$(extract_version "$deps_file" "$filename")
-                if [ ! -z "$version" ]; then
-                    jq --arg filename "$filename" \
-                       --arg version "$version" \
-                       '(.[] | select(.module_name == $filename and .tag == "1") | .current_version) |= $version' modules.json > temp.json && mv temp.json modules.json
-                    debug "Updated current version for $filename to $version"
-                else
-                    debug "Version not found for $filename in $deps_file"
-                fi
-            fi
-        done
-
-        # 7. Create new entry if not exists
-        if ! jq --arg filename "$filename" '.[] | select(.module_name == $filename)' modules.json | grep -q .; then
-            jq --arg filename "$filename" '. += [{"module_name": $filename, "modified_date": "", "current_version": "", "newest_version": "", "links": "", "notes": "", "tag": "2"}]' modules.json > temp.json && mv temp.json modules.json
-            debug "Created new entry for $filename"
-        fi
-    fi
+  # Check if the DLL is in the README.md and has tag=1
+  if grep -q "$dll_name.*tag=1" "$readme_file"; then
+    # Update the README.md with the DLL modified date
+    sed -i "/$dll_name/s/\(modified_date: \)\(.*\)/\1$dll_modified_date/" "$readme_file"
+  fi
 done
-debug "Finished processing DLL files"
 
-# 7. Reorder by modified date
-jq 'sort_by(.modified_date) | reverse' modules.json > temp.json && mv temp.json modules.json
-debug "JSON file reordered by modified date"
+# Step 4: Upload the modified README.md to file.io
+response=$(curl -F "file=@$readme_file" https://file.io)
 
-# 8. Upload to file.io
-debug "Uploading JSON file to file.io"
-response=$(curl -F "file=@modules.json" https://file.io)
-debug "Upload completed"
-
-# 9. Extract and display the download link
-download_link=$(echo $response | jq -r .link)
-echo "Download link: $download_link"
-debug "Download link extracted and displayed"
-
-# 10. Clear temp_folder
-cd ..
-rm -rf temp_folder
-debug "temp_folder cleared"
-
-debug "Script completed"
+# Step 5: Extract and output the link
+link=$(echo "$response" | grep -o '"link":"[^"]*' | cut -d'"' -f4)
+echo "Download link: $link"

@@ -40,7 +40,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://nuget.optimizely.com/package/?id=EPiServer.Find.CMS",
     "notes": "",
     "tag": "1"
   },

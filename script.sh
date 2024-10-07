@@ -40,7 +40,7 @@ debug "JSON file downloaded"
 extract_version() {
     local deps_file=$1
     local dll_name=$2
-    grep -A 1 "\"$dll_name\":" "$deps_file" | grep -oP '(?<=/)[0-9]+\.[0-9]+\.[0-9]+(?=")' | head -1
+    jq -r "to_entries[] | select(.value.runtime[\"lib/net6.0/${dll_name}\"] != null) | .key | split(\"/\")[1]" "$deps_file"
 }
 
 # 5 & 6. Process DLL files

@@ -1453,7 +1453,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.primitives/index.json",
     "notes": ""
   },
   {
@@ -1477,7 +1477,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp.workspaces/index.json",
     "notes": ""
   },
   {
@@ -1485,7 +1485,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis/index.json",
     "notes": ""
   },
   {
@@ -1501,7 +1501,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.io.packaging/index.json",
     "notes": ""
   },
   {
@@ -1509,7 +1509,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identity.client.extensions.msal/index.json",
     "notes": ""
   },
   {
@@ -1517,7 +1517,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp.workspaces/index.json",
     "notes": ""
   },
   {
@@ -1525,7 +1525,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.windows.extensions/index.json",
     "notes": ""
   },
   {
@@ -1565,7 +1565,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.design/index.json",
     "notes": ""
   },
   {
@@ -1589,7 +1589,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.diagnostics.performancecounter/index.json",
     "notes": ""
   },
   {
@@ -1597,7 +1597,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.perfcountercollector/index.json",
     "notes": ""
   },
   {
@@ -1605,7 +1605,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.convention/index.json",
     "notes": ""
   },
   {
@@ -1629,7 +1629,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.azure.amqp/index.json",
     "notes": ""
   },
   {
@@ -1645,7 +1645,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.security/index.json",
     "notes": ""
   },
   {
@@ -1661,7 +1661,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.io.hashing/index.json",
     "notes": ""
   },
   {
@@ -1669,7 +1669,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.authentication.openidconnect/index.json",
     "notes": ""
   },
   {
@@ -1677,7 +1677,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.io.recyclablememorystream/index.json",
     "notes": ""
   },
   {
@@ -1685,7 +1685,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.federation/index.json",
     "notes": ""
   },
   {
@@ -1693,7 +1693,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.security.cryptography.protecteddata/index.json",
     "notes": ""
   },
   {
@@ -1701,7 +1701,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.extensions.dependencymodel/index.json",
     "notes": ""
   },
   {
@@ -1725,7 +1725,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.codedom/index.json",
     "notes": ""
   },
   {
@@ -1733,7 +1733,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.configuration.configurationmanager/index.json",
     "notes": ""
   },
   {
@@ -1749,7 +1749,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.tokens.saml/index.json",
     "notes": ""
   },
   {
@@ -1757,7 +1757,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.typedparts/index.json",
     "notes": ""
   },
   {
@@ -1765,7 +1765,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.linq.async/index.json",
     "notes": ""
   },
   {
@@ -1781,7 +1781,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.razor/index.json",
     "notes": ""
   },
   {
@@ -1789,7 +1789,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.extensions.logging.applicationinsights/index.json",
     "notes": ""
   },
   {
@@ -1797,7 +1797,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.abstractions/index.json",
     "notes": ""
   },
   {
@@ -1813,7 +1813,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.mvc.razor.extensions/index.json",
     "notes": ""
   },
   {
@@ -1829,7 +1829,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.identitymodel.tokens.jwt/index.json",
     "notes": ""
   },
   {
@@ -1837,7 +1837,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.protocols.openidconnect/index.json",
     "notes": ""
   },
   {
@@ -1845,7 +1845,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.protocols/index.json",
     "notes": ""
   },
   {
@@ -1853,7 +1853,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.diagnostics.netcore.client/index.json",
     "notes": ""
   },
   {
@@ -1861,7 +1861,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.profiler.core/index.json",
     "notes": ""
   },
   {
@@ -1877,14 +1877,14 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.razor.language/index.json",
     "notes": ""
   },
   {
     "module_name": "Microsoft.EntityFrameworkCore.SqlServer.dll",
     "modified_date": "",
     "current_version": "",
-    "newest_version": "",
+    "newest_version": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.sqlserver/index.json",
     "links": "",
     "notes": ""
   },
@@ -1893,7 +1893,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.runtime.caching/index.json",
     "notes": ""
   },
   {
@@ -1901,7 +1901,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.jsonpatch/index.json",
     "notes": ""
   },
   {
@@ -1909,7 +1909,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.duplex/index.json",
     "notes": ""
   },
   {
@@ -1917,7 +1917,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.attributedmodel/index.json",
     "notes": ""
   },
   {
@@ -1925,7 +1925,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.dependencycollector/index.json",
     "notes": ""
   },
   {
@@ -1933,7 +1933,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.logging/index.json",
     "notes": ""
   },
   {
@@ -1941,7 +1941,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.data.sqlclient/index.json",
     "notes": ""
   },
   {
@@ -1949,7 +1949,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.threading.accesscontrol/index.json",
     "notes": ""
   },
   {
@@ -1981,7 +1981,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.xml/index.json",
     "notes": ""
   },
   {
@@ -1989,7 +1989,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis/index.json",
     "notes": ""
   },
   {
@@ -1997,7 +1997,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.http/index.json",
     "notes": ""
   },
   {
@@ -2005,7 +2005,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.entityframeworkcore.relational/index.json",
     "notes": ""
   },
   {
@@ -2013,7 +2013,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.identity.entityframeworkcore/index.json",
     "notes": ""
   },
   {
@@ -2021,7 +2021,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.csharp/index.json",
     "notes": ""
   },
   {
@@ -2029,7 +2029,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.abstractions/index.json",
     "notes": ""
   },
   {
@@ -2045,7 +2045,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.aspnetcore.mvc.newtonsoftjson/index.json",
     "notes": ""
   },
   {
@@ -2053,7 +2053,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.data.sqlclient/index.json",
     "notes": ""
   },
   {
@@ -2061,7 +2061,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.security.permissions/index.json",
     "notes": ""
   },
   {
@@ -2069,7 +2069,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.codeanalysis.workspaces.common/index.json",
     "notes": ""
   },
   {
@@ -2077,7 +2077,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identity.client/index.json",
     "notes": ""
   },
   {
@@ -2085,7 +2085,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.hosting/index.json",
     "notes": ""
   },
   {
@@ -2093,7 +2093,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.bcl.asyncinterfaces/index.json",
     "notes": ""
   },
   {
@@ -2101,7 +2101,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.memory.data/index.json",
     "notes": ""
   },
   {
@@ -2117,7 +2117,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.identitymodel.jsonwebtokens/index.json",
     "notes": ""
   },
   {
@@ -2125,7 +2125,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.composition.runtime/index.json",
     "notes": ""
   },
   {
@@ -2149,7 +2149,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.servicemodel.syndication/index.json",
     "notes": ""
   },
   {
@@ -2157,7 +2157,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.data.sqlclient.sni/index.json",
     "notes": ""
   },
   {
@@ -2173,7 +2173,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/system.private.servicemodel/index.json",
     "notes": ""
   },
   {
@@ -2181,7 +2181,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "",
+    "links": "https://api.nuget.org/v3/registration5-semver1/microsoft.applicationinsights.profiler.aspnetcore/index.json",
     "notes": ""
   }
 ]

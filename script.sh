@@ -9,7 +9,7 @@ cd "$temp_folder" || exit
 curl -o README.md https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/README.md
 
 # Step 3: Scan all DLLs in the /app directory
-app_directory="../app"
+app_directory="/app"
 readme_file="README.md"
 
 if [[ ! -d "$app_directory" ]]; then

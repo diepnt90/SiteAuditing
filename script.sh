@@ -1,43 +1,56 @@
 #!/bin/bash
 
-# Set your GitHub information
-GITHUB_OWNER="diepnt90"                           # GitHub username
-GITHUB_REPO="SiteAuditing"                         # Repository name
-GITHUB_BRANCH="main"                               # Branch name, e.g., 'main'
-FILE_PATH="dll_updates.md"                         # File to be uploaded
-GITHUB_TOKEN="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"              # Your GitHub Personal Access Token
+# Step 1: Install jq without sudo
+apt-get install -y jq
 
-# GitHub API endpoint for the file
-GITHUB_API_URL="https://api.github.com/repos/$GITHUB_OWNER/$GITHUB_REPO/contents/$FILE_PATH"
+# Step 2: Make the temp_folder in the current directory
+TEMP_FOLDER="./temp_folder"
+mkdir -p "$TEMP_FOLDER"
 
-# Get the content of the file encoded in base64
-FILE_CONTENT=$(base64 -w 0 "$FILE_PATH") # -w 0 removes line wrapping for the base64 output
+# Step 3: Go to the temp_folder
+cd "$TEMP_FOLDER" || exit
 
-# Get SHA of the existing file if it exists
-SHA=$(curl -s -H "Authorization: Bearer $GITHUB_TOKEN" "$GITHUB_API_URL" | jq -r '.sha')
+# Step 4: Download the JSON file from GitHub
+curl -L -o modules.json https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/modules.json
 
-# Step 1: Delete the existing file if it exists (Optional but will ensure it's a new upload)
-if [ "$SHA" != "null" ]; then
-    DELETE_PAYLOAD=$(jq -n --arg message "Delete old dll_updates.md" --arg branch "$GITHUB_BRANCH" --arg sha "$SHA" \
-    '{ message: $message, branch: $branch, sha: $sha }')
+# Step 5 & 6: Gather all DLL files in folder /app and update the JSON
+APP_DIR="/app"
+for dll_file in "$APP_DIR"/*.dll; do
+    dll_name=$(basename "$dll_file")
     
-    curl -X DELETE -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$DELETE_PAYLOAD" "$GITHUB_API_URL"
-    
-    echo "Old dll_updates.md deleted."
-fi
+    # Check if module_name exists in JSON and tag = 1
+    jq_filter='.[] | select(.module_name == "'"$dll_name"'" and .tag == "1")'
+    module_exists=$(jq "$jq_filter" modules.json)
 
-# Step 2: Upload the new file
-# Create JSON payload for GitHub API to add the new file
-UPLOAD_PAYLOAD=$(jq -n --arg path "$FILE_PATH" --arg message "Add new dll_updates.md" --arg content "$FILE_CONTENT" --arg branch "$GITHUB_BRANCH" \
-'{ path: $path, message: $message, content: $content, branch: $branch }')
+    if [[ -n "$module_exists" ]]; then
+        # Update modified_date of the DLL file
+        modified_date=$(stat -c %y "$dll_file" | cut -d' ' -f1)
+        jq '(.[] | select(.module_name == "'"$dll_name"'" and .tag == "1") | .modified_date) |= "'"$modified_date"'"' modules.json > temp.json && mv temp.json modules.json
+        
+        # Find version in .deps.json
+        for deps_file in "$APP_DIR"/*.deps.json; do
+            version=$(jq -r 'to_entries[] | select(.value.runtime | has("lib/net6.0/'"$dll_name"'")) | .key' "$deps_file" | awk -F '/' '{print $2}')
+            if [[ -n "$version" ]]; then
+                jq '(.[] | select(.module_name == "'"$dll_name"'" and .tag == "1") | .current_version) |= "'"$version"'"' modules.json > temp.json && mv temp.json modules.json
+            fi
+        done
+    else
+        # Add new module if it doesn't exist in JSON
+        new_module=$(jq -n --arg module_name "$dll_name" --arg tag "2" '{module_name: $module_name, modified_date: "", current_version: "", newest_version: "", links: "", notes: "", tag: $tag}')
+        jq '. += [$new_module]' modules.json > temp.json && mv temp.json modules.json
+    fi
+done
 
-# Upload the file using GitHub API
-RESPONSE=$(curl -X PUT -H "Authorization: Bearer $GITHUB_TOKEN" -H "Content-Type: application/json" -d "$UPLOAD_PAYLOAD" "$GITHUB_API_URL")
+# Step 7: Reorder the downloaded JSON with the date modified desc
+jq 'sort_by(.modified_date) | reverse' modules.json > temp.json && mv temp.json modules.json
 
-# Check for successful upload
-if echo "$RESPONSE" | grep -q '"commit":'; then
-    echo "New dll_updates.md uploaded successfully."
-else
-    echo "Failed to upload dll_updates.md. Response:"
-    echo "$RESPONSE"
-fi
+# Step 8: Upload the downloaded JSON to file.io
+response=$(curl -F "file=@modules.json" https://file.io)
+
+# Step 9: Get the downloaded link and show to the screen
+download_link=$(echo "$response" | jq -r '.link')
+echo "Download link: $download_link"
+
+# Step 10: Clear the temp_folder
+cd ..
+rm -rf "$TEMP_FOLDER"

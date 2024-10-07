@@ -36,8 +36,9 @@ for dll_file in "$APP_DIR"/*.dll; do
         done
     else
         # Add new module if it doesn't exist in JSON
-        new_module=$(jq -n --arg module_name "$dll_name" --arg tag "2" '{module_name: $module_name, modified_date: "", current_version: "", newest_version: "", links: "", notes: "", tag: $tag}')
-        jq '. += [$new_module]' modules.json > temp.json && mv temp.json modules.json
+        jq --arg module_name "$dll_name" --arg tag "2" \
+           '. += [{module_name: $module_name, modified_date: "", current_version: "", newest_version: "", links: "", notes: "", tag: $tag}]' \
+           modules.json > temp.json && mv temp.json modules.json
     fi
 done
 

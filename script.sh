@@ -23,12 +23,23 @@ for dll in "$app_directory"/*.dll; do
   [[ -e "$dll" ]] || continue
 
   dll_name=$(basename "$dll")
-  dll_modified_date=$(date -r "$dll" "+%Y-%m-%d %H:%M:%S")
+
+  # Get the Modify date using stat command
+  dll_modified_date=$(stat "$dll" | grep 'Modify:' | awk '{print $2, $3}' | cut -d'.' -f1)
 
   # Check if the DLL is in the README.md and has tag=1
   if grep -q "$dll_name.*tag=1" "$readme_file"; then
+    # Debug message before updating
+    echo "Updating modified date for DLL: $dll_name with date: $dll_modified_date"
+    
     # Update the README.md with the DLL modified date
     sed -i "/$dll_name/s/\(modified_date: \)\(.*\)/\1$dll_modified_date/" "$readme_file"
+    
+    # Debug message after updating
+    echo "Updated $dll_name successfully."
+  else
+    # Debug message if DLL is not found or does not have tag=1
+    echo "DLL: $dll_name not found in README.md or tag=1 is not set."
   fi
 done
 

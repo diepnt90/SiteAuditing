@@ -81,7 +81,16 @@ else
   echo "Failed to remove objects with tag '0'."
 fi
 
-# Step 8: Check and update the "newest_version" based on the "links" field
+# Step 8: Remove objects with "modified_date" set to an empty string
+echo "Removing objects with empty 'modified_date'..."
+jq 'del(.[] | select(.modified_date == ""))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
+if [ $? -eq 0 ]; then
+  echo "Successfully removed objects with empty 'modified_date'."
+else
+  echo "Failed to remove objects with empty 'modified_date'."
+fi
+
+# Step 9: Check and update the "newest_version" based on the "links" field
 echo "Updating newest_version for each module based on links..."
 jq -c '.[]' ./temp_folder/module.json | while read module; do
   links=$(echo "$module" | jq -r '.links')
@@ -117,7 +126,7 @@ jq -c '.[]' ./temp_folder/module.json | while read module; do
   fi
 done
 
-# Step 9: Remove the "links" field from all objects
+# Step 10: Remove the "links" field from all objects
 echo "Removing the 'links' field from all objects..."
 jq 'del(.[] | .links)' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
 if [ $? -eq 0 ]; then
@@ -126,7 +135,7 @@ else
   echo "Failed to remove 'links' field."
 fi
 
-# Step 10: Upload the updated module.json to file.io and output the download link
+# Step 11: Upload the updated module.json to file.io and output the download link
 echo "Uploading updated module.json to file.io..."
 upload_response=$(curl -F "file=@./temp_folder/module.json" https://file.io)
 upload_link=$(echo $upload_response | jq -r '.link')
@@ -136,7 +145,7 @@ else
   echo "Failed to upload module.json."
 fi
 
-# Step 11: Clean up the temp_folder
+# Step 12: Clean up the temp_folder
 echo "Cleaning up temp_folder..."
 rm -rf ./temp_folder
 echo "Cleanup complete."

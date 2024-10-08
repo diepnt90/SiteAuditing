@@ -1121,7 +1121,7 @@
     "current_version": "",
     "newest_version": "",
     "links": "https://nuget.optimizely.com/package/?id=EPiServer.Forms",
-    "notes": "",
+    "notes": "Jobs cause high CPU if version is 4.40.3",
     "tag": "1"
   },
   {

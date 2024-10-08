@@ -50,12 +50,35 @@ while read dll_file; do
 
 done < ./temp_folder/dll_files.txt
 
-# Step 7: After processing, remove all objects with "tag": "0"
+# Step 7: Remove all objects with "tag": "0"
 jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
 
-# Step 8: Upload the updated module.json to file.io and output the download link
+# Step 8: Check and update the "newest_version" based on the "links" field
+jq -c '.[]' ./temp_folder/module.json | while read module; do
+  links=$(echo "$module" | jq -r '.links')
+  newest_version=""
+
+  if [[ $links == *"github.com"* ]]; then
+    # GitHub link: Look for version after /releases/tag/
+    release_version=$(curl -s "$links" | grep -oP '(?<=/releases/tag/)[^"]*')
+    newest_version=$release_version
+  elif [[ $links == *"nuget.optimizely.com"* ]]; then
+    # nuget.optimizely.com: Look for document.title
+    newest_version=$(curl -s "$links" | grep -oP "(?<=document.title = ')[^']*")
+  elif [[ $links == *"api.nuget.org"* ]]; then
+    # api.nuget.org: Look for versions array and extract the latest version
+    newest_version=$(curl -s "$links" | jq -r '.versions[-1]')
+  fi
+
+  module_name=$(echo "$module" | jq -r '.module_name')
+  jq --arg dll "$module_name" --arg version "$newest_version" \
+    '(.[] | select(.module_name == $dll) | .newest_version) = $version' \
+    ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
+done
+
+# Step 9: Upload the updated module.json to file.io and output the download link
 upload_response=$(curl -F "file=@./temp_folder/module.json" https://file.io)
 echo "Download link: $(echo $upload_response | jq -r '.link')"
 
-# Step 9: Clean up the temp_folder
+# Step 10: Clean up the temp_folder
 rm -rf ./temp_folder

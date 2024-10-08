@@ -56,11 +56,12 @@ jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/te
 # Step 8: Convert module.json to a human-readable table format in module.txt
 jq -r '.[] | ["Module Name", "Modified Date", "Current Version", "Newest Version", "Tag", "Links", "Notes"], ["-----------", "-------------------", "---------------", "---------------", "----", "-----", "-----"], (.module_name, .modified_date, .current_version, .newest_version, .tag, .links, .notes)] | @tsv' ./temp_folder/module.json | column -t -s $'\t' | sed 's/^/| /;s/$/ |/;s/\t/ | /g' | sed 's/ /-/g' > ./temp_folder/module.txt
 
-# Output the result in a table view with dotted lines in module.txt
+# Step 9: Upload both module.json and module.txt to file.io and output the download links
+json_upload_response=$(curl -F "file=@./temp_folder/module.json" https://file.io)
+txt_upload_response=$(curl -F "file=@./temp_folder/module.txt" https://file.io)
 
-# Step 9: Upload the updated module.txt to file.io and output the download link
-upload_response=$(curl -F "file=@./temp_folder/module.txt" https://file.io)
-echo "Download link: $(echo $upload_response | jq -r '.link')"
+echo "Download link for module.json: $(echo $json_upload_response | jq -r '.link')"
+echo "Download link for module.txt: $(echo $txt_upload_response | jq -r '.link')"
 
 # Step 10: Clean up the temp_folder
 rm -rf ./temp_folder

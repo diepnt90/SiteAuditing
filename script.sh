@@ -13,15 +13,6 @@ mkdir ./temp_folder
 # Since GitHub raw file URL needs to be accessed, we'll use the raw version of the file.
 curl -o ./temp_folder/module.json https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/module.json
 
-# Validate the downloaded module.json before proceeding
-if ! jq empty ./temp_folder/module.json; then
-  echo "Error: Invalid JSON format in module.json"
-  exit 1
-fi
-
-# Reformat the JSON file to ensure proper formatting
-jq . ./temp_folder/module.json > ./temp_folder/module_clean.json && mv ./temp_folder/module_clean.json ./temp_folder/module.json
-
 # Step 4: Scan all .dll files in the /app folder and save them into a temp file
 find /app -type f -name "*.dll" > ./temp_folder/dll_files.txt
 

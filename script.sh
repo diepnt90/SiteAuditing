@@ -53,21 +53,11 @@ done < ./temp_folder/dll_files.txt
 # Step 7: After processing, remove all objects with "tag": "0"
 jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
 
-# Step 8: Convert the module.json to a table format and save it as a txt file
+# Step 8: Convert module.json to a human-readable table format in module.txt
+jq -r '.[] | ["Module Name", "Modified Date", "Current Version", "Newest Version", "Tag", "Links", "Notes"], ["-----------", "-------------------", "---------------", "---------------", "----", "-----", "-----"], (.module_name, .modified_date, .current_version, .newest_version, .tag, .links, .notes)] | @tsv' ./temp_folder/module.json | column -t -s $'\t' | sed 's/^/| /;s/$/ |/;s/\t/ | /g' | sed 's/ /-/g' > ./temp_folder/module.txt
 
-# Define the output file
-output_file="./temp_folder/module_table.txt"
+# Output the result in a table view with dotted lines in module.txt
 
-# Print headers with dotted lines into the output file
-echo "Module Name             | Modified Date        | Current Version | Newest Version | Links | Notes | Tag" > "$output_file"
-echo "------------------------|----------------------|-----------------|----------------|-------|-------|----" >> "$output_file"
-
-# Iterate through each entry in the module.json and format it as a table row
-jq -r '.[] | [.module_name, .modified_date, .current_version, .newest_version, .links, .notes, .tag] | @tsv' ./temp_folder/module.json | while IFS=$'\t' read -r module_name modified_date current_version newest_version links notes tag; do
-    # Print each line in table format, aligning columns properly
-    printf "%-23s | %-20s | %-15s | %-14s | %-5s | %-5s | %-2s\n" \
-    "$module_name" "$modified_date" "$current_version" "$newest_version" "$links" "$notes" "$tag" >> "$output_file"
-done
 # Step 9: Upload the updated module.txt to file.io and output the download link
 upload_response=$(curl -F "file=@./temp_folder/module.txt" https://file.io)
 echo "Download link: $(echo $upload_response | jq -r '.link')"

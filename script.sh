@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Step 1: Install jq
-sudo apt-get install jq -y
+apt-get install jq -y
 
 # Step 2: Create or recreate "temp_folder"
 if [ -d "./temp_folder" ]; then

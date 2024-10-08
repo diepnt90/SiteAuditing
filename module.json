@@ -96,7 +96,7 @@
     "newest_version": "",
     "links": "",
     "notes": "",
-    "tag": "1"
+    "tag": "0"
   },
   {
     "module_name": "TWS.CMS.Core.dll",
@@ -931,7 +931,7 @@
     "modified_date": "",
     "current_version": "",
     "newest_version": "",
-    "links": "https://api.nuget.optimizely.com/packages/episerver.marketing.testing/",
+    "links": "",
     "notes": "",
     "tag": "1"
   },

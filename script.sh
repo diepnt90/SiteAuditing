@@ -55,12 +55,12 @@ jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/te
 
 # Step 8: Convert module.json to a table format and save as module.txt
 {
-  printf "%-30s | %-20s | %-10s | %-10s | %-50s | %-30s | %-3s\n" "Module Name" "Modified Date" "Curr. Ver" "New. Ver" "Links" "Notes" "Tag"
-  printf "%s\n" "--------------------------------------------------------------------------------------------------------------------------"
-  
-  jq -r '.[] | "\(.module_name) | \(.modified_date) | \(.current_version) | \(.newest_version) | \(.links) | \(.notes) | \(.tag)"' ./temp_folder/module.json | 
-  while IFS= read -r line; do
-    printf "%-30s | %-20s | %-10s | %-10s | %-50s | %-30s | %-3s\n" $line
+  printf "%-35s | %-20s | %-10s | %-10s | %-60s | %-30s | %-3s\n" "Module Name" "Modified Date" "Curr. Ver" "New. Ver" "Links" "Notes" "Tag"
+  printf "%s\n" "---------------------------------------------------------------------------------------------------------------------------------------------------------"
+
+  jq -r '.[] | [.module_name, .modified_date, .current_version, .newest_version, .links, .notes, .tag] | @tsv' ./temp_folder/module.json | 
+  while IFS=$'\t' read -r module_name modified_date current_version newest_version links notes tag; do
+    printf "%-35s | %-20s | %-10s | %-10s | %-60s | %-30s | %-3s\n" "$module_name" "$modified_date" "$current_version" "$newest_version" "$links" "$notes" "$tag"
   done
 } > ./temp_folder/module.txt
 

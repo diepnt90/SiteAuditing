@@ -50,6 +50,9 @@ while read dll_file; do
 
 done < ./temp_folder/dll_files.txt
 
+# Step 7: After processing, remove all objects with "tag": "0"
+jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
+
 # Step 8: Upload the updated module.json to file.io and output the download link
 upload_response=$(curl -F "file=@./temp_folder/module.json" https://file.io)
 echo "Download link: $(echo $upload_response | jq -r '.link')"

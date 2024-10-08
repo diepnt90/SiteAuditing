@@ -53,6 +53,9 @@ done < ./temp_folder/dll_files.txt
 # Step 7: After processing, remove all objects with "tag": "0"
 jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
 
+# Step 7.1: Remove the "Links" key from all objects
+jq '(.[] | del(.links))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
+
 # Step 8: Convert module.json to a table format and save as module.txt
 {
   printf "%-35s | %-20s | %-10s | %-10s | %-60s | %-30s | %-3s\n" "Module Name" "Modified Date" "Curr. Ver" "New. Ver" "Links" "Notes" "Tag"

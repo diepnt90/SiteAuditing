@@ -53,9 +53,20 @@ done < ./temp_folder/dll_files.txt
 # Step 7: After processing, remove all objects with "tag": "0"
 jq 'del(.[] | select(.tag == "0"))' ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
 
-# Step 8: Upload the updated module.json to file.io and output the download link
-upload_response=$(curl -F "file=@./temp_folder/module.json" https://file.io)
+# Step 8: Convert module.json to a table format and save as module.txt
+{
+  printf "%-30s | %-20s | %-10s | %-10s | %-50s | %-30s | %-3s\n" "Module Name" "Modified Date" "Curr. Ver" "New. Ver" "Links" "Notes" "Tag"
+  printf "%s\n" "--------------------------------------------------------------------------------------------------------------------------"
+  
+  jq -r '.[] | "\(.module_name) | \(.modified_date) | \(.current_version) | \(.newest_version) | \(.links) | \(.notes) | \(.tag)"' ./temp_folder/module.json | 
+  while IFS= read -r line; do
+    printf "%-30s | %-20s | %-10s | %-10s | %-50s | %-30s | %-3s\n" $line
+  done
+} > ./temp_folder/module.txt
+
+# Step 9: Upload the updated module.txt to file.io and output the download link
+upload_response=$(curl -F "file=@./temp_folder/module.txt" https://file.io)
 echo "Download link: $(echo $upload_response | jq -r '.link')"
 
-# Step 9: Clean up the temp_folder
+# Step 10: Clean up the temp_folder
 rm -rf ./temp_folder

@@ -10,7 +10,6 @@ fi
 mkdir ./temp_folder
 
 # Step 3: Download the module.json from the GitHub repository
-# Since GitHub raw file URL needs to be accessed, we'll use the raw version of the file.
 curl -o ./temp_folder/module.json https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/module.json
 
 # Step 4: Scan all .dll files in the /app folder and save them into a temp file
@@ -33,7 +32,7 @@ while read dll_file; do
       '(.[] | select(.module_name == $dll and .tag == "1") | .modified_date) = $date' \
       ./temp_folder/module.json > ./temp_folder/temp.json && mv ./temp_folder/temp.json ./temp_folder/module.json
   else
-    # Step 6: If the DLL is not found in module.json, add a new object for it
+    # Step 6: If the DLL is not found in module.json, add a new object for it with "tag": "2"
     modified_date=$(stat -c %y "$dll_file" | cut -d'.' -f1)
     new_entry=$(jq -n --arg dll "$dll_name" --arg date "$modified_date" '{
       module_name: $dll,
@@ -42,7 +41,7 @@ while read dll_file; do
       newest_version: "",
       links: "",
       notes: "",
-      tag: "1"
+      tag: "2"
     }')
 
     # Append the new object to module.json

@@ -12,11 +12,11 @@ do
     # Extract the module name (file name without path)
     module_name=$(basename "$dll_file")
 
-    # Get the modified date using stat
-    modified_date=$(stat -c %y "$dll_file" | cut -d' ' -f1)
+    # Get the modified date and time using stat, then trim to the desired format (YYYY-MM-DD HH:MM)
+    modified_date=$(stat -c %y "$dll_file" | cut -d'.' -f1 | cut -d':' -f1,2)
 
     # Append the information to the CSV file
-    echo "$module_name,$modified_date" >> "$CSV_FILE"
+    echo "$module_name,\"$modified_date\"" >> "$CSV_FILE"
 done
 
-echo "CSV file $CSV_FILE created with the list of .dll files and their modified dates."
+echo "CSV file $CSV_FILE created with the list of .dll files and their modified dates (YYYY-MM-DD HH:MM)."

@@ -1,0 +1,41 @@
+import csv
+
+# Define the file names
+dll_files = 'dll_files.csv'
+module_files = 'module.csv'
+output_file = 'merged_output.csv'
+
+# Read the dll_files.csv into a dictionary with module_name as the key
+dll_dict = {}
+with open(dll_files, mode='r', newline='') as dll_csv:
+    reader = csv.DictReader(dll_csv)
+    dll_headers = reader.fieldnames
+    for row in reader:
+        dll_dict[row['module_name']] = row
+
+# Read the module.csv and perform the left join with the dll_files data
+with open(module_files, mode='r', newline='') as module_csv, \
+        open(output_file, mode='w', newline='') as out_csv:
+    
+    reader = csv.DictReader(module_csv)
+    module_headers = reader.fieldnames
+    
+    # Combine the headers from both files, excluding duplicate 'module_name'
+    combined_headers = dll_headers + [header for header in module_headers if header != 'module_name']
+    
+    writer = csv.DictWriter(out_csv, fieldnames=combined_headers)
+    writer.writeheader()
+    
+    # Perform the left join by iterating over dll_dict and merging with module.csv
+    for module_name, dll_row in dll_dict.items():
+        module_row = next((row for row in reader if row['module_name'] == module_name), None)
+        if module_row:
+            # Combine the two rows, excluding the duplicate module_name
+            combined_row = {**dll_row, **{key: value for key, value in module_row.items() if key != 'module_name'}}
+        else:
+            combined_row = dll_row
+        
+        writer.writerow(combined_row)
+        module_csv.seek(0)  # Reset reader to the beginning after each iteration
+
+print("Merge complete! The merged file has been saved as 'merged_output.csv'.")

@@ -4,6 +4,7 @@ import re
 import sys
 import json
 import subprocess
+import requests  # Import requests for making HTTP requests
 
 # URL of the module.csv file on GitHub
 module_csv_url = "https://raw.githubusercontent.com/diepnt90/SiteAuditing/main/module.csv"
@@ -57,8 +58,9 @@ def get_newest_version_nuget(link):
             data = response.json()
             versions = data.get("versions", [])
             if versions:
-                print(f"Newest version from NuGet API: {versions[-1]}")
-                return versions[-1]  # Get the latest version from the list
+                newest_version = versions[-1]
+                print(f"Newest version from NuGet API: {newest_version}")
+                return newest_version
     except Exception as e:
         print(f"Error fetching from nuget.org: {e}")
     return None
@@ -71,8 +73,9 @@ def get_newest_version_optimizely(link):
         if response.status_code == 200:
             match = re.search(r"document\.title\s*=\s*'.*? (\d+\.\d+\.\d+)';", response.text)
             if match:
-                print(f"Newest version from Optimizely: {match.group(1)}")
-                return match.group(1)  # Extract the version number
+                newest_version = match.group(1)
+                print(f"Newest version from Optimizely: {newest_version}")
+                return newest_version
     except Exception as e:
         print(f"Error fetching from nuget.optimizely.com: {e}")
     return None
@@ -85,8 +88,9 @@ def get_newest_version_github(link):
         if response.status_code == 200:
             match = re.search(r'href=".*?/releases/tag/([\d.]+)"', response.text)
             if match:
-                print(f"Newest version from GitHub: {match.group(1)}")
-                return match.group(1)  # Extract the version number
+                newest_version = match.group(1)
+                print(f"Newest version from GitHub: {newest_version}")
+                return newest_version
     except Exception as e:
         print(f"Error fetching from GitHub: {e}")
     return None
@@ -117,7 +121,6 @@ with open(input_csv, mode='r', newline='') as dll_scan_csv:
     for row in reader:
         module_name = row['module_name']
         link = row.get('links', '').strip()
-        newest_version = None
 
         # Step 2: Find the current version by scanning the provided .deps.json file
         current_version = find_current_version(module_name, deps_json)
@@ -131,15 +134,12 @@ with open(input_csv, mode='r', newline='') as dll_scan_csv:
             newest_version = get_newest_version_optimizely(link)
         elif "github.com" in link:
             newest_version = get_newest_version_github(link)
-        
-        # Step 4: Update the newest_version in the row
-        if newest_version:
-            row['newest_version'] = newest_version
-        else:
-            print(f"No newest version found for {module_name}")
-            row['newest_version'] = ""  # Leave it empty if no version found
 
-        # Step 5: Empty the 'links' column value
+        # Echo and directly update newest_version in the row
+        print(f"Updating module {module_name} with newest version: {newest_version}")
+        row['newest_version'] = newest_version
+
+        # Empty the 'links' column value
         row['links'] = ""
 
         dll_scan_rows.append(row)
